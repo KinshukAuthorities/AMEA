@@ -1,6 +1,6 @@
 # AMEA — ChatGPT Animation Production Instructions
 
-For ChatGPT sessions with verified computer-control, visual-inspection and workspace tools. Load these instructions, then activate with `Use AMEA:` followed by the user's request. Choose original creation, reconstruction, editing, or a combination from intent. No source video is required for original animation. The included sections supply all skill instructions and references. Local helper scripts remain in the AMEA bundle. Overlap independent asset work, story/action/camera planning, setup, sound planning and review with actual available permitted workers. Coordinate shared revisions, dependencies, native-file ownership and desktop input. Infer performance intent from the brief and verify it in moving roughs. Track material request requirements, prove the actual method at the requested stage before scaling, and compare the delivered result against the original request after internal corrections. Ask for missing 2D/3D and software preferences; reuse established choices. Prefer TRELLIS.2 as the first 3D asset-generation candidate, trying its official hosted workflow when suitable. Use supplied images or create missing references. On blocked access offer a prepared-image/GLB handoff or appropriate local setup. Computer-vision review of actual playback and rendered frames is the primary quality check; code measurements only support it. Instructions do not grant editor control, media access, image generation, speech tools, credentials or paid-service access. No dependencies or weights are bundled.
+For ChatGPT sessions with verified computer-control, visual-inspection and workspace tools. Load these instructions, then activate with `Use AMEA:` followed by the user's request. Choose original creation, reconstruction, editing, or a combination from intent. No source video is required for original animation. The included sections supply all skill instructions and references. Local helper scripts remain in the AMEA bundle. Overlap independent asset work, story/action/camera planning, setup, sound planning and review with actual available permitted workers. Coordinate shared revisions, dependencies, native-file ownership and desktop input. Infer performance intent from the brief and verify it in moving roughs. Track material request requirements, prove the actual method at the requested stage before scaling, and compare the delivered result against the original request after internal corrections. Ask for missing 2D/3D and software preferences; reuse established choices. Prefer TRELLIS.2 as the first 3D asset-generation candidate, trying its official hosted workflow when suitable. Use supplied images or create missing references. If the required model or online route is unavailable, explain the blocker, ask which available alternative the user wants, and wait before switching methods, installing an inference stack or downloading a local model. Reuse an existing choice. Computer-vision review of actual playback and rendered frames is the primary quality check; code measurements only support it. Instructions do not grant editor control, media access, image generation, speech tools, credentials or paid-service access. No dependencies or weights are bundled.
 
 
 ---
@@ -46,7 +46,9 @@ Read editing and styling (included section `skills/amea/references/editing-and-s
 
 For new 3D assets, prefer TRELLIS.2 as the first candidate and use suitable online generation before local setup unless context favors local/offline work. Follow asset generation (included section `skills/amea/references/asset-generation.md`) for supplied or missing images, official hosted links, GLB export, blocked-service handoff, and hardware-aware alternatives. The preference is a starting point rather than a mandatory backend.
 
-Read runtime (included section `skills/amea/references/runtime.md`) before setup. The package includes authored helpers and compatibility patches, not downloaded libraries, editors, generator source, or model weights. For hosted generation, install no local inference stack. For necessary local work, run the dependency doctor with available Python, reuse compatible installations, and install only missing requirements in an isolated environment. Do not modify unrelated projects, repeatedly download existing weights, or start an unrelated server by habit. Verify actual host controls and capabilities.
+If the required model or generation route is unavailable, or online access is blocked, explain the blocker and ask the user which available alternative to use. Wait for their choice before switching methods or setting up a local model. Reuse a choice already supplied. Continue independent planning while waiting; do not assume a fallback from installed tools.
+
+Read runtime (included section `skills/amea/references/runtime.md`) before setup. The package includes authored helpers, not downloaded libraries, editors, generator source, or model weights. `requirements.txt` is the single dependency catalog. For hosted generation, install no local inference stack. For selected local work, run the dependency doctor with available Python, reuse compatible installations, and install only missing requirements in an isolated environment. Do not modify unrelated projects, repeatedly download existing weights, or start an unrelated server by habit. Verify actual host controls and capabilities.
 
 Use native scripting and command-line APIs for repeatable operations when appropriate. Avoid repeated file dialogs and complete scene rebuilds for a local correction. Respect a requested production method and describe imported generated work or procedural work accurately. Read performance and resuming (included section `skills/amea/references/performance.md`) for benchmarks, resource limits, caches and corrections.
 
@@ -150,7 +152,7 @@ Choose and record the style, proportions, coordinate basis, scale, materials, co
 
 Use supplied asset images or create missing references with an available image/drawing tool. Prefer TRELLIS.2 as the first image-to-3D candidate, trying its official hosted workflow before a local install unless the user's constraints favor local processing. Export and inspect the actual GLB. On a concrete access blocker, offer user generation from the prepared images and GLB handoff or a hardware-appropriate local setup. Reuse an established choice. Select another suitable method when context warrants it; do not lock the project to one model.
 
-The Hunyuan mesh runner is an optional local fallback and requires its own source, weights, and dependencies. Neither it nor a hosted GLB guarantees good topology, likeness, a rig, or correct deformation. Inspect those before animation, and adapt setup to the current user's hardware rather than a previous computer's limits.
+If the required model or generation route cannot be used, explain the blocker, offer relevant available routes and wait for the user's choice before switching methods or setting up a local model. Reuse an existing choice. A hosted or locally generated GLB does not guarantee good topology, likeness, a rig or correct deformation. Inspect those before animation, and adapt selected local setup to the current user's hardware.
 
 ## Build a performance-ready scene
 
@@ -262,9 +264,7 @@ Use consistent modeling views and coordinate conventions. Generate separate part
 
 Inspect finite vertices, bounds, normals, components, holes, thin sheets, and self-intersections. Remove inference floaters when appropriate to a single connected form; preserve valid separate parts. Watertightness is useful for some assets, but is not a universal requirement or a quality certificate.
 
-Known hierarchical-decoder issues: fractional voxel dimensions constructed in an integer dtype can collapse query coordinates; use float32 before converting queries to inference dtype. NaN-filled unqueried refinement cells can create artificial marching-cubes sheets; preserve coarse inside/outside signs through trilinear refinement. The optional compatibility patch helper checks this source layout before modifying it. Keep original licenses and prominent modification notices. Do not apply old patches blindly to changed upstream code.
-
-On a memory-limited GPU, use sequential inference, CPU offload, and bounded surface-query chunks. Check the actual execution device after attaching offload hooks. The lightweight pipeline may need an explicit `components` mapping. Reuse existing model weights and VAE; avoid fetching an unrelated model to work around a known compatibility defect.
+For a selected local generator, use memory controls actually supported by its current implementation. Measure throughput and inspect the execution device rather than copying settings from a different backend. Reuse verified source and checkpoint caches. If that route cannot work, follow asset generation (included section `skills/amea/references/asset-generation.md`) and ask the user before choosing an alternative; do not download another model as an implicit repair.
 
 ## Materials and expression
 
@@ -287,7 +287,7 @@ Test representative extremes before a long bake. Inspect surfaces as well as ske
 
 Included section: `skills/amea/references/asset-generation.md`
 
-# Asset references, online generation, and local fallback
+# Asset references, online generation, and user-selected alternatives
 
 ## Use the right inputs
 
@@ -305,7 +305,6 @@ Official discovery links that the agent must know:
 - [TRELLIS.2 project and capabilities](https://microsoft.github.io/TRELLIS.2/).
 - [TRELLIS.2 official source and local requirements](https://github.com/microsoft/TRELLIS.2).
 - [TRELLIS.2 official weights](https://huggingface.co/microsoft/TRELLIS.2-4B).
-- [Hunyuan3D official source and alternatives](https://github.com/Tencent-Hunyuan/Hunyuan3D-2).
 
 Verify that the service is actually reachable and supports the needed export. Use a supported browser or documented API. The official TRELLIS.2 demo provides generation followed by an **Extract GLB** export; creating a preview alone does not save the mesh. Inspect views, extract the asset, and download its GLB with required textures/materials before calling generation complete. Do not assume every similarly named website is Microsoft's official service, or that the host is always available or unrestricted.
 
@@ -315,21 +314,21 @@ Try suitable hosted generation first unless the user has requested local/offline
 
 If the online workflow succeeds, continue with the downloaded assets in the selected animation software. If a temporary error is plausibly transient, use a bounded retry. Avoid repeated blocked submissions or switching to paid services silently.
 
-If login, quota, payment, access, missing browser/API capability, or another concrete blocker prevents hosted generation, explain the actual blocker and offer the relevant practical choices in one concise question:
+If the required model is unavailable, or login, quota, payment, access, missing browser/API capability or another concrete blocker prevents the generation route, explain the actual blocker and offer the relevant practical choices in one concise question:
 
 - The user runs the prepared reference images through the linked generator and supplies the resulting GLB and any companion assets. Save a ready-to-use reference folder, generation settings/request, and export directions so the user does not have to recreate the setup.
 - The agent sets up local generation, reusing installed tools and verified cached weights or downloading only missing requirements.
 - Another available suitable service or native modeling method, when the situation supports it and the user accepts that route.
 
-Reuse a choice the user has already made. Do not ask for secrets, bypass access limits, or treat elapsed time as permission for payment. Do not demand a local download when the user can return generated files. While external generation is pending, continue independent planning and preserve the exact pending asset handoff.
+Wait for the user's decision before taking an alternative route, installing its inference stack or downloading a local model. Reuse a choice the user has already made. Do not assume a fallback based on available helper scripts or installed packages. Do not ask for secrets, bypass access limits, or treat elapsed time as permission. Do not demand a local download when the user can return generated files. While a decision or external generation is pending, continue independent planning and preserve the exact pending asset handoff.
 
 ## Evaluate local resources for this user
 
 Inspect the current user's OS, GPU architecture/VRAM, RAM, storage, installed dependencies, and available time. Do not encode one previous machine's limitations as a universal rule. A capable machine may support local TRELLIS.2 well; a constrained machine may favor hosted processing or a lighter backend.
 
-Check the selected backend's current official setup and dependency versions. TRELLIS.2's official documented reference setup uses Linux and a large NVIDIA GPU; community ports/offloading may differ and need their own smoke test. The Hunyuan helper is a separate optional fallback, not a reason to replace the preferred model on every system. Do not mix incompatible CUDA-extension stacks in one environment.
+After local execution has been selected, check that backend's current official setup, supported platforms and dependency versions. Community ports/offloading may differ and need their own smoke test. Do not mix incompatible CUDA-extension stacks in one environment.
 
-Choose a backend intelligently rather than cycling through every model. When the preferred method is suitable and accessible, proceed. A different model or manual construction may fit a particular asset, software, hardware, or edit better. The presence of a Hunyuan-specific helper does not override the TRELLIS.2 preference or require offline generation. Record the reason for a material change of method and preserve user-specified constraints.
+When the preferred method is suitable and accessible, proceed. If it cannot be used, present relevant alternatives with their actual access, hardware and setup tradeoffs, then follow the user's choice. Do not cycle through models without that decision. Record the selected route and preserve user-specified constraints.
 
 For a user-operated handoff, `tools/asset_handoff.py` can copy the selected reference images and brief into a new folder, record hashes, write export directions, and create a small handoff ZIP. It does not upload images, generate geometry, or imply the returned asset has been reviewed. Use the primary conditioning image accepted by the service; supplementary views remain design/review references unless the selected service supports them as inputs.
 
@@ -479,7 +478,7 @@ For animation production, test a short representative interval through the inten
 
 Inspect both the real moving result and the native editing structure. Judge identity and style at the views and framing the production will use; a neutral front view is insufficient when other views matter. Check that the chosen method can sustain the required consistency, not just produce one good image. For speech, test actual usable audio and timing rather than a text script. Prove required compositing, text, color/alpha and export behavior when they are a material risk.
 
-If this test fails, correct the method or its inputs before scaling. Do not polish a known wrong design or multiply an unproven animation process across the whole sequence. A different supported tool or native repair may solve the problem within existing preferences; changing a user-mandated medium, software, provenance constraint or essential scope needs their decision. Preserve accepted work and continue independent tasks while resolving a blocker.
+If this test fails, correct the method or its inputs before scaling. Do not polish a known wrong design or multiply an unproven animation process across the whole sequence. A different supported tool or native repair may solve the problem within existing preferences; changing a user-mandated medium, software, provenance constraint or essential scope needs their decision. For unavailable models or blocked generation access, follow asset generation (included section `skills/amea/references/asset-generation.md`) and wait for the user's route choice before switching methods or setting up another model. Preserve accepted work and continue independent tasks while resolving a blocker.
 
 ## Review the whole intended result
 
@@ -842,37 +841,29 @@ Included section: `skills/amea/references/runtime.md`
 
 # Dependencies and local execution
 
-AMEA contains authored skills, references, and helpers. It does not ship Python, PyTorch, common libraries, editors, downloaded generator source, or model weights. `requirements.txt` is the dependency catalog with workflow profiles and external tool/model links. Install only the profile and tools the chosen workflow needs.
+AMEA contains authored skills, references and helpers. It does not ship Python, libraries, editors, downloaded generator source or model weights. `requirements.txt` is the single dependency file: its installable baseline supports image helpers, and comments identify optional backend dependencies and official setup links. Install only what the chosen workflow needs.
 
-Prefer suitable hosted TRELLIS.2 for new 3D assets; read asset generation (included section `skills/amea/references/asset-generation.md`) before any local installation. Use supplied reference images or create missing ones. A successful hosted GLB export requires no local PyTorch or generation checkpoint. For blocked hosted access, offer prepared-image/GLB handoff or an appropriate local backend and reuse the user's decision.
+Establish missing medium/software preferences before production and reuse earlier choices. Discover the selected editor and its supported controls. Run `python tools/dependency_doctor.py` with available Python to inspect helper dependencies and optional tools; this report does not prove GUI access or animation capability.
 
-Before production, establish medium and software preferences. Run `python tools/dependency_doctor.py` with an available Python, discover the chosen editor and its supported API, and inventory existing environments and model caches. Reuse a working installation before installing another one. Do not modify another project's environment to satisfy this one.
+## Generation access and user choice
 
-Create a project-local environment only when needed. Install the selected workflow's missing dependencies; installing the complete optional 3D stack for simple 2D editing wastes time and disk. Keep the compatible PyTorch/torchvision pair and choose CPU or CUDA wheels for the actual machine using PyTorch's official selector. Test a real tensor operation and generator import, not merely package presence. Do not install a CUDA toolkit or new GPU driver by habit.
+Prefer suitable hosted TRELLIS.2 for new 3D assets; read asset generation (included section `skills/amea/references/asset-generation.md`) before setup. Use supplied images or create missing references with available tools. A hosted GLB export needs no local inference framework or checkpoint.
 
-Applications are separate from pip dependencies. The user chooses the editor. Discover or install only that editor when needed; Blender and Krita are supported optional paths. FFmpeg and FFprobe handle media assembly and checks. Choose compatible binaries for the OS and keep their original notices. API access, paid generation, voice synthesis, and host image generation are not supplied by Python package installation.
+If the required model or usable generation route is unavailable, or online access is blocked, explain the concrete blocker and ask the user which available route to take. Offer prepared-image/asset handoff, suitable local generation, or another method as relevant. Wait for that decision before switching methods, downloading a local model or installing its inference stack. Reuse a choice already made; do not ask again or infer a fallback from an installed package. Continue independent planning while waiting.
 
-Before scaling, demonstrate the actual selected production route as described in first-delivery acceptance (included section `skills/amea/references/first-delivery.md`). A dependency report, tensor smoke test or generated static mesh is not proof of consistent animation, expressive controls, usable sound or editable delivery. Test those required capabilities through real artifacts.
+## Selected local setup
 
-## Optional local TRELLIS.2
+After local generation has been selected, inspect this user's OS, GPU architecture/VRAM, RAM, storage and available time. Reuse compatible installed environments and verified caches without modifying another project's environment. Check the chosen model's current official setup, checkpoint and platform support. Do not assume every user shares a previous machine's limits.
 
-Use the official source, checkpoint, and installation procedure linked in `requirements.txt`. Inspect the current hardware/software requirements and compatible extension stack before setup. A capable user's machine can run a suitable local configuration; do not assume all users share a particular GPU or operating system. Record the source revision, checkpoint identity, environment, output settings, and a real generation smoke test.
+Create an isolated project environment when needed and install only missing dependencies for that selected model. Keep compatible framework, CUDA and extension versions together. Test real imports and a small generation, preserving source revision, checkpoint identity, settings and provenance. Package presence or a tensor smoke test alone does not prove the generator works. Preserve licenses and relevant notices. Diagnose unfamiliar upstream failures before applying source changes.
 
-Use a separate environment for backend-specific PyTorch/CUDA extensions. Do not force the Hunyuan version pins onto TRELLIS.2. Download only required weights and dependencies when local generation has been selected. Community builds require their own compatibility verification.
+Applications and host capabilities are separate from pip dependencies. Use the selected editor and compatible FFmpeg/FFprobe binaries when needed. Do not install a new editor, GPU driver, CUDA toolkit, server or unrelated backend by habit. Image generation, speech tools and service access require actual available capabilities.
 
-## Optional local Hunyuan fallback
-
-When this fallback suits the task, use its official source and checkpoint listed in `requirements.txt` and the `requirements-hunyuan.txt` profile. Reuse local source/weights if present. Record revisions, hashes, licenses and local changes. The known FP16 shape weight file is 3,819,958,234 bytes with SHA256 `3cc66f3bea33e4062b7dbc875ffe1d70c4888914aec3e91b60f94e9bd01b522b`; verify an exact copy against that identity. A different checkpoint needs its own identity and compatibility test.
-
-Keep the model's `config.yaml` alongside its weights. Preserve upstream `LICENSE` and `NOTICE`. Use `tools/hunyuan_compat.py` to check/apply the known compatible decoder fix only against the expected source structure; unfamiliar versions require inspection. Retain modification notices and original source backups.
-
-Use `tools/generate_mesh.py` with explicit source, checkpoint, image, and output paths. This runner loads local files and does not automatically download a model or start a server. It uses chunked hierarchical surface extraction, the execution-device/offload compatibility setup, and optional isolated-component cleanup. Inputs need actual image references. Outputs are unrigged meshes, not completed animation or textured, expression-ready characters.
-
-Set CPU threads and query chunks according to measured memory and throughput. Keep large GPU inference sequential on constrained hardware. CPU inference may be possible but slow; say so based on measurement. Do not silently substitute an unrelated service or backend when a capability is missing.
+Before scaling, demonstrate the production route appropriate to the requested stage as described in first-delivery acceptance (included section `skills/amea/references/first-delivery.md`). A static mesh or dependency report does not establish consistent animation, expressive controls, usable sound or editable delivery.
 
 ## Helper boundaries
 
-`amea_project.py` manages Krita drawing evidence and timing; it does not draw or control the UI. The Blender renderer and audit run through Blender's Python, not ordinary pip `bpy`. For another editor, use its supported native implementation and preserve equivalent evidence. Helpers do not certify artistic quality, source fidelity, collisions, or subjective audio review.
+`amea_project.py` manages the optional Krita drawing evidence/timing contract; it does not draw or control the UI. Blender rendering and audit helpers run through the selected Blender executable. For another editor use its supported native tools and equivalent evidence. Helpers do not certify artistic quality, source fidelity, contact or subjective audio review.
 
 
 ---

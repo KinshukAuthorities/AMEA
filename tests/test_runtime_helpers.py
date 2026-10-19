@@ -1,12 +1,12 @@
-"""Behavior checks for safe cache resuming, frame integrity, audits and source compatibility."""
+"""Behavior checks for safe cache resuming, frame integrity, audits and asset handoffs."""
 import importlib.util,json,os,subprocess,sys,tempfile,unittest,zipfile
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1];TOOLS=ROOT/'tools';WORK=ROOT/'tests/.work';WORK.mkdir(exist_ok=True)
 sys.path.insert(0,str(TOOLS))
-import common,render_queue,hunyuan_compat,asset_handoff
+import common,render_queue,asset_handoff
 
-class PathAndCompatibilityTests(unittest.TestCase):
+class PathAndHandoffTests(unittest.TestCase):
     def test_handoff_preserves_inputs_and_requires_actual_files(self):
         from PIL import Image
         with tempfile.TemporaryDirectory(dir=WORK) as tmp:
@@ -26,31 +26,6 @@ class PathAndCompatibilityTests(unittest.TestCase):
             with self.assertRaises(ValueError):common.project_output(tmp,'../outside')
             with self.assertRaises(ValueError):common.project_output(tmp,'.')
             self.assertTrue(common.project_output(tmp,'renders/current').is_relative_to(Path(tmp)))
-
-    def test_unknown_source_is_not_modified(self):
-        with tempfile.TemporaryDirectory(dir=WORK) as tmp:
-            file=Path(tmp)/'hy3dgen/shapegen/models/autoencoders/volume_decoders.py';file.parent.mkdir(parents=True)
-            file.write_text('unrecognized = True\n')
-            with self.assertRaises(ValueError):hunyuan_compat.patch(tmp,True)
-            self.assertEqual(file.read_text(),'unrecognized = True\n')
-            self.assertFalse(file.with_suffix('.py.amea-original').exists())
-
-    def test_decoder_patch_preserves_backup_and_is_idempotent(self):
-        source='''import torch
-import torch.nn.functional as F
-class HierarchicalVolumeDecoding:
-    def convert(self, next_points, resolution, bbox_min, device, grid_size, dtype, grid_logits):
-        next_logits = torch.full(tuple(grid_size), float('nan'), dtype=dtype, device=device)
-        next_points = next_points * torch.tensor(resolution, dtype=next_points.dtype, device=device)
-        next_points += torch.tensor(bbox_min, dtype=next_points.dtype, device=device)
-        return next_points, next_logits
-'''
-        with tempfile.TemporaryDirectory(dir=WORK) as tmp:
-            file=Path(tmp)/'hy3dgen/shapegen/models/autoencoders/volume_decoders.py';file.parent.mkdir(parents=True);file.write_text(source)
-            self.assertTrue(hunyuan_compat.patch(tmp,True)['applied'])
-            self.assertEqual(file.with_suffix('.py.amea-original').read_text(),source)
-            self.assertFalse(hunyuan_compat.patch(tmp,True)['patch_needed'])
-            compile(file.read_text(),str(file),'exec')
 
 class BlenderIntegrationTests(unittest.TestCase):
     @unittest.skipUnless(common.discover('blender') and common.discover('ffmpeg') and common.discover('ffprobe'),'Optional Blender and FFmpeg integration tools unavailable')

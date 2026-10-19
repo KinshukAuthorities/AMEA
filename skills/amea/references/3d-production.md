@@ -16,9 +16,7 @@ Use consistent modeling views and coordinate conventions. Generate separate part
 
 Inspect finite vertices, bounds, normals, components, holes, thin sheets, and self-intersections. Remove inference floaters when appropriate to a single connected form; preserve valid separate parts. Watertightness is useful for some assets, but is not a universal requirement or a quality certificate.
 
-Known hierarchical-decoder issues: fractional voxel dimensions constructed in an integer dtype can collapse query coordinates; use float32 before converting queries to inference dtype. NaN-filled unqueried refinement cells can create artificial marching-cubes sheets; preserve coarse inside/outside signs through trilinear refinement. The optional compatibility patch helper checks this source layout before modifying it. Keep original licenses and prominent modification notices. Do not apply old patches blindly to changed upstream code.
-
-On a memory-limited GPU, use sequential inference, CPU offload, and bounded surface-query chunks. Check the actual execution device after attaching offload hooks. The lightweight pipeline may need an explicit `components` mapping. Reuse existing model weights and VAE; avoid fetching an unrelated model to work around a known compatibility defect.
+For a selected local generator, use memory controls actually supported by its current implementation. Measure throughput and inspect the execution device rather than copying settings from a different backend. Reuse verified source and checkpoint caches. If that route cannot work, follow [asset generation](asset-generation.md) and ask the user before choosing an alternative; do not download another model as an implicit repair.
 
 ## Materials and expression
 

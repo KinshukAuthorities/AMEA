@@ -4,9 +4,8 @@ from pathlib import Path
 from common import discover
 
 def inspect(profile='drawing',deep=False):
-    names=['Pillow','numpy']
-    if profile in {'mesh','hunyuan'}:names+=['torch','torchvision','diffusers','transformers','accelerate','safetensors','trimesh','scipy','scikit-image','pymeshlab','omegaconf','einops','opencv-python','PyYAML','huggingface-hub']
-    if profile=='trellis':names+=['torch','Pillow','numpy','imageio','opencv-python','tqdm','trimesh','safetensors']
+    names=['Pillow']
+    if profile=='trellis':names+=['torch','torchvision','numpy','imageio','opencv-python-headless','tqdm','trimesh','safetensors']
     versions={};missing=[]
     for name in dict.fromkeys(names):
         try:versions[name]=metadata.version(name)
@@ -25,19 +24,16 @@ def inspect(profile='drawing',deep=False):
                 from PIL import Image
                 im=Image.new('RGBA',(2,2),(1,2,3,128));report['smoke_checks']['pillow']=im.getpixel((0,0))==(1,2,3,128)
             except Exception as e:report['smoke_checks']['pillow_error']=str(e)
-        if profile in {'mesh','hunyuan','trellis'} and 'torch' in versions:
+        if profile=='trellis' and 'torch' in versions:
             try:
                 import torch
                 device='cuda' if torch.cuda.is_available() else 'cpu'
                 report['smoke_checks']['tensor']={'device':device,'sum':torch.arange(6,device=device).sum().item(),
                     'torch':torch.__version__,
                     'gpu':torch.cuda.get_device_name(0) if device=='cuda' else None}
-                if profile in {'mesh','hunyuan'}:
-                    import torchvision
-                    report['smoke_checks']['tensor']['torchvision']=torchvision.__version__
             except Exception as e:report['smoke_checks']['tensor_error']=str(e)
     return report
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--profile',choices=['drawing','mesh','hunyuan','trellis'],default='drawing');p.add_argument('--deep',action='store_true')
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--profile',choices=['drawing','trellis'],default='drawing');p.add_argument('--deep',action='store_true')
     a=p.parse_args();print(json.dumps(inspect(a.profile,a.deep),indent=2))

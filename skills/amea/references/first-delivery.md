@@ -20,7 +20,7 @@ For animation production, test a short representative interval through the inten
 
 Inspect both the real moving result and the native editing structure. Judge identity and style at the views and framing the production will use; a neutral front view is insufficient when other views matter. Check that the chosen method can sustain the required consistency, not just produce one good image. For speech, test actual usable audio and timing rather than a text script. Prove required compositing, text, color/alpha and export behavior when they are a material risk.
 
-If this test fails, correct the method or its inputs before scaling. Do not polish a known wrong design or multiply an unproven animation process across the whole sequence. A different supported tool or native repair may solve the problem within existing preferences; changing a user-mandated medium, software, provenance constraint or essential scope needs their decision. Preserve accepted work and continue independent tasks while resolving a blocker.
+If this test fails, correct the method or its inputs before scaling. Do not polish a known wrong design or multiply an unproven animation process across the whole sequence. A different supported tool or native repair may solve the problem within existing preferences; changing a user-mandated medium, software, provenance constraint or essential scope needs their decision. For unavailable models or blocked generation access, follow [asset generation](asset-generation.md) and wait for the user's route choice before switching methods or setting up another model. Preserve accepted work and continue independent tasks while resolving a blocker.
 
 ## Review the whole intended result
 

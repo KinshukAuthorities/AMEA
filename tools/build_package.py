@@ -24,8 +24,10 @@ def build(root=None):
                 "and compare the delivered result against the original request after internal corrections. "
                 "Ask for missing 2D/3D and software preferences; reuse established choices. Prefer TRELLIS.2 "
                 "as the first 3D asset-generation candidate, trying its official hosted workflow when suitable. "
-                "Use supplied images or create missing references. On blocked access offer a prepared-image/GLB "
-                "handoff or appropriate local setup. Computer-vision review of actual playback and rendered "
+                "Use supplied images or create missing references. If the required model or online route is unavailable, "
+                "explain the blocker, ask which available alternative the user wants, and wait before switching "
+                "methods, installing an inference stack or downloading a local model. Reuse an existing choice. "
+                "Computer-vision review of actual playback and rendered "
                 "frames is the primary quality check; code measurements only support it. Instructions do not grant editor control, media access, "
                 "image generation, speech tools, credentials or paid-service access. No dependencies or weights are bundled.\n"]
     for document in documents:
@@ -46,7 +48,7 @@ def build(root=None):
         sections.append(f"\n---\n\nIncluded section: `{document.relative_to(root).as_posix()}`\n\n{text.strip()}\n")
     prompt = root / "CHATGPT-AMEA.md"
     prompt.write_text("\n".join(sections), encoding="utf-8")
-    files = [root / "README.md", root / "LICENSE", root / ".gitignore", root / "QUALITY-AUDIT.md", prompt, *root.glob("requirements*.txt")]
+    files = [root / "README.md", root / "LICENSE", root / ".gitignore", root / "requirements.txt", prompt]
     for folder in (root / "skills", root / "tools", root / "tests"):
         files += [path for path in folder.rglob("*") if path.is_file()
                   and not any(part in {"__pycache__", ".work", ".runtime", "runtime", "vendor", "projects"} for part in path.relative_to(root).parts)

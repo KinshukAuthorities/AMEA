@@ -1,4 +1,4 @@
-# Asset references, online generation, and local fallback
+# Asset references, online generation, and user-selected alternatives
 
 ## Use the right inputs
 
@@ -16,7 +16,6 @@ Official discovery links that the agent must know:
 - [TRELLIS.2 project and capabilities](https://microsoft.github.io/TRELLIS.2/).
 - [TRELLIS.2 official source and local requirements](https://github.com/microsoft/TRELLIS.2).
 - [TRELLIS.2 official weights](https://huggingface.co/microsoft/TRELLIS.2-4B).
-- [Hunyuan3D official source and alternatives](https://github.com/Tencent-Hunyuan/Hunyuan3D-2).
 
 Verify that the service is actually reachable and supports the needed export. Use a supported browser or documented API. The official TRELLIS.2 demo provides generation followed by an **Extract GLB** export; creating a preview alone does not save the mesh. Inspect views, extract the asset, and download its GLB with required textures/materials before calling generation complete. Do not assume every similarly named website is Microsoft's official service, or that the host is always available or unrestricted.
 
@@ -26,21 +25,21 @@ Try suitable hosted generation first unless the user has requested local/offline
 
 If the online workflow succeeds, continue with the downloaded assets in the selected animation software. If a temporary error is plausibly transient, use a bounded retry. Avoid repeated blocked submissions or switching to paid services silently.
 
-If login, quota, payment, access, missing browser/API capability, or another concrete blocker prevents hosted generation, explain the actual blocker and offer the relevant practical choices in one concise question:
+If the required model is unavailable, or login, quota, payment, access, missing browser/API capability or another concrete blocker prevents the generation route, explain the actual blocker and offer the relevant practical choices in one concise question:
 
 - The user runs the prepared reference images through the linked generator and supplies the resulting GLB and any companion assets. Save a ready-to-use reference folder, generation settings/request, and export directions so the user does not have to recreate the setup.
 - The agent sets up local generation, reusing installed tools and verified cached weights or downloading only missing requirements.
 - Another available suitable service or native modeling method, when the situation supports it and the user accepts that route.
 
-Reuse a choice the user has already made. Do not ask for secrets, bypass access limits, or treat elapsed time as permission for payment. Do not demand a local download when the user can return generated files. While external generation is pending, continue independent planning and preserve the exact pending asset handoff.
+Wait for the user's decision before taking an alternative route, installing its inference stack or downloading a local model. Reuse a choice the user has already made. Do not assume a fallback based on available helper scripts or installed packages. Do not ask for secrets, bypass access limits, or treat elapsed time as permission. Do not demand a local download when the user can return generated files. While a decision or external generation is pending, continue independent planning and preserve the exact pending asset handoff.
 
 ## Evaluate local resources for this user
 
 Inspect the current user's OS, GPU architecture/VRAM, RAM, storage, installed dependencies, and available time. Do not encode one previous machine's limitations as a universal rule. A capable machine may support local TRELLIS.2 well; a constrained machine may favor hosted processing or a lighter backend.
 
-Check the selected backend's current official setup and dependency versions. TRELLIS.2's official documented reference setup uses Linux and a large NVIDIA GPU; community ports/offloading may differ and need their own smoke test. The Hunyuan helper is a separate optional fallback, not a reason to replace the preferred model on every system. Do not mix incompatible CUDA-extension stacks in one environment.
+After local execution has been selected, check that backend's current official setup, supported platforms and dependency versions. Community ports/offloading may differ and need their own smoke test. Do not mix incompatible CUDA-extension stacks in one environment.
 
-Choose a backend intelligently rather than cycling through every model. When the preferred method is suitable and accessible, proceed. A different model or manual construction may fit a particular asset, software, hardware, or edit better. The presence of a Hunyuan-specific helper does not override the TRELLIS.2 preference or require offline generation. Record the reason for a material change of method and preserve user-specified constraints.
+When the preferred method is suitable and accessible, proceed. If it cannot be used, present relevant alternatives with their actual access, hardware and setup tradeoffs, then follow the user's choice. Do not cycle through models without that decision. Record the selected route and preserve user-specified constraints.
 
 For a user-operated handoff, `tools/asset_handoff.py` can copy the selected reference images and brief into a new folder, record hashes, write export directions, and create a small handoff ZIP. It does not upload images, generate geometry, or imply the returned asset has been reviewed. Use the primary conditioning image accepted by the service; supplementary views remain design/review references unless the selected service supports them as inputs.
 

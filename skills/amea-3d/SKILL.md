@@ -19,7 +19,7 @@ Choose and record the style, proportions, coordinate basis, scale, materials, co
 
 Use supplied asset images or create missing references with an available image/drawing tool. Prefer TRELLIS.2 as the first image-to-3D candidate, trying its official hosted workflow before a local install unless the user's constraints favor local processing. Export and inspect the actual GLB. On a concrete access blocker, offer user generation from the prepared images and GLB handoff or a hardware-appropriate local setup. Reuse an established choice. Select another suitable method when context warrants it; do not lock the project to one model.
 
-The Hunyuan mesh runner is an optional local fallback and requires its own source, weights, and dependencies. Neither it nor a hosted GLB guarantees good topology, likeness, a rig, or correct deformation. Inspect those before animation, and adapt setup to the current user's hardware rather than a previous computer's limits.
+If the required model or generation route cannot be used, explain the blocker, offer relevant available routes and wait for the user's choice before switching methods or setting up a local model. Reuse an existing choice. A hosted or locally generated GLB does not guarantee good topology, likeness, a rig or correct deformation. Inspect those before animation, and adapt selected local setup to the current user's hardware.
 
 ## Build a performance-ready scene
 
