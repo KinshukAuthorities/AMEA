@@ -75,21 +75,6 @@ If the required model is unavailable or online generation is blocked, the agent 
 
 AMEA is a skill and helper package. The connected tools and production work determine the achievable result; instructions alone do not provide those capabilities.
 
-## Development
-
-Install helper dependencies in an isolated environment and run the checks:
-
-```bash
-python -m pip install -r requirements.txt
-python -m unittest discover -s tests -v
-```
-
-Blender/FFmpeg integration tests run when those tools are available. Regenerate the consolidated instructions and the lightweight `../AMEA.zip` with:
-
-```bash
-python tools/build_package.py
-```
-
 ## License
 
 [MIT](LICENSE). External tools, models, and supplied assets retain their own licenses and terms.
