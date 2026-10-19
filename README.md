@@ -48,11 +48,17 @@ For faithful recreation, it follows the source. For edits, it preserves unaffect
 
 ```mermaid
 flowchart TD
-    request[Your request and optional source material] --> plan[Understand the task and select the workflow]
-    plan --> produce[Create, recreate, edit or convert]
-    produce --> review[Inspect the result and correct issues]
-    review -->|Needs correction| produce
-    review -->|Ready| deliver[Deliver the requested output and editable project]
+    request[Your request and optional source material] --> intent[Requirements, medium and software]
+    intent --> assets[Design and assets]
+    intent --> plan[Storyboard and animation planning]
+    intent --> setup[Setup and sound planning]
+    assets --> test[Test the chosen production method]
+    plan --> test
+    setup --> test
+    test --> production[Create, recreate, edit or convert]
+    production --> review[Inspect playback, sound and editable project]
+    review -->|Needs correction| production
+    review -->|Ready| delivery[Deliver the requested output and editable project]
 ```
 
 Independent work can run in parallel when the host supports it. The agent reviews actual playback and frames, corrects visible issues, and retests before delivery. The work stays within your request, including when you ask only for planning or a rough version.
