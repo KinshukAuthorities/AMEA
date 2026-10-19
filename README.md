@@ -1,12 +1,12 @@
 # AMEA — Anime Engineer Anything
 
-**Create, recreate, edit, and convert anime videos with ChatGPT and your chosen software.**
+**Create, recreate, edit, and convert anime into 2D, 3D animations with ChatGPT.**
 
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 [Quick start](#quick-start) · [Capabilities](#capabilities) · [Workflow](#workflow) · [Requirements](#requirements)
 
-Start with a description, reference images, an existing project, or a video. AMEA supplies the skills and instructions for a ChatGPT session that can control the computer, work with files, and inspect the result.
+Start with a idea description, reference images, an existing project, or a video. AMEA supplies the skills and instructions for a ChatGPT session that can control the computer, work with files, and inspect the result.
 
 ## Quick start
 
@@ -19,11 +19,9 @@ git clone https://github.com/KinshukAuthorities/AMEA.git
 cd AMEA
 ```
 
-### 2. Load the instructions
+### 2. Load and Use AMEA
 
-Give your ChatGPT session access to the repository and ask it to read [`skills/amea/SKILL.md`](skills/amea/SKILL.md). Keep the skill folders together.
-
-Alternatively, load [`CHATGPT-AMEA.md`](CHATGPT-AMEA.md) as consolidated instructions. Keep the repository available if helper scripts are needed.
+Give your ChatGPT session access to the repository and ask it to read the repository and all its skills.
 
 ### 3. Make your request
 
@@ -31,15 +29,15 @@ Alternatively, load [`CHATGPT-AMEA.md`](CHATGPT-AMEA.md) as consolidated instruc
 Use AMEA: [your request]
 ```
 
-Attach any source material and include your 2D/3D and software preferences when known. AMEA reuses established choices and asks together for missing essential preferences.
+Attach any source material and include your 2D/3D and software preferences when known. if not provided, then AMEA asks for missing essential preferences.
 
 ## Capabilities
 
 | Task | What AMEA does |
 | --- | --- |
-| [Create](skills/amea-create/SKILL.md) | Develop an original animation from your request and optional references. |
-| [Recreate](skills/amea-recreate/SKILL.md) | Rebuild supplied footage with the appearance, action, and timing you want to preserve. |
-| [Edit](skills/amea-edit/SKILL.md) | Apply requested changes, insert material, or edit timing, style, framing, text, effects, and sound. |
+| [Create](skills/amea-create/SKILL.md) | Develop an original animation from your request. |
+| [Recreate](skills/amea-recreate/SKILL.md) | Rebuild supplied footage for you preserving details, timings, quality. |
+| [Edit](skills/amea-edit/SKILL.md) | Apply requested changes, insert material, or edit timing, style, framing, text, effects, and sound and much more as requested. |
 | [Convert to 2D or 3D](skills/amea/SKILL.md) | Recreate a source video in the requested animation format and apply your specified changes. |
 
 For faithful recreation, it follows the source. For edits, it preserves unaffected content and carries persistent changes into later scenes. Sound is handled according to the request and context. You do not need to restate continuity, synchronization, review, or export.
@@ -69,7 +67,7 @@ Independent work can run in parallel when the host supports it. The agent review
 - Your selected animation software. AMEA asks if you have not already chosen it.
 - Python 3.10+ for the optional helpers; FFmpeg and FFprobe for helper-based media processing.
 
-[`requirements.txt`](requirements.txt) is the single dependency file. Its installable baseline supports the image helpers; comments identify optional model dependencies and official setup links. The agent installs only what the chosen workflow needs. Editors, model weights, libraries, and user projects are not bundled.
+[`requirements.txt`](requirements.txt) is the single dependency file. The agent installs only what the chosen workflow needs like blender, krita, pytorch etc as per requirements.
 
 For new 3D assets, **TRELLIS.2 is the preferred starting point** when suitable. The agent uses your supplied asset images or creates missing references, then tries the [official hosted generator](https://huggingface.co/spaces/microsoft/TRELLIS.2) where available.
 
