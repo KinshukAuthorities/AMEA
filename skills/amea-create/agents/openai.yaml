@@ -1,0 +1,4 @@
+interface:
+  display_name: "AMEA Original Animation"
+  short_description: "Create original animation from a brief"
+  default_prompt: "Use $amea-create to produce original animation from my brief."

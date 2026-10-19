@@ -1,0 +1,4 @@
+interface:
+  display_name: "AMEA"
+  short_description: "Create, recreate, and edit anime animation"
+  default_prompt: "Use $amea to carry out my animation request in Krita."

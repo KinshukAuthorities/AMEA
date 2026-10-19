@@ -1,0 +1,4 @@
+interface:
+  display_name: "AMEA Reconstruction"
+  short_description: "Reconstruct animation from source evidence"
+  default_prompt: "Use $amea-recreate to reconstruct the supplied animation as requested."

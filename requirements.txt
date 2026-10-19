@@ -1,0 +1,77 @@
+# AMEA dependency catalog. No downloaded libraries, editors, source repos, or weights ship in AMEA.zip.
+# Establish 2D/3D and software preferences first; reuse already established choices.
+# Use supplied asset images, or create the missing references with available tools.
+# Prefer TRELLIS.2 as the first 3D-generation candidate; try hosted generation first
+# unless the user's constraints favor local/offline work. Choose other methods intelligently.
+# Do not install local inference libraries or weights just to download a hosted GLB.
+
+# COMMON helper baseline. Install only what the selected workflow needs.
+-r requirements-2d.txt
+packaging>=24
+psutil>=6
+
+# HOSTED TRELLIS.2 (preferred first candidate; no local PyTorch required):
+# Official demo: https://huggingface.co/spaces/microsoft/TRELLIS.2
+# Project: https://microsoft.github.io/TRELLIS.2/
+# Generate, inspect, use Extract GLB, then download the actual asset.
+# A browser may require no additional Python packages. If using a supported Gradio
+# API, gradio-client is optional; verify the current API before installing it.
+# Login/quota/access blocker: offer prepared-image/GLB handoff or local setup.
+
+# OPTIONAL LOCAL TRELLIS.2 — do not combine its environment with unrelated backend pins:
+# Source/setup: https://github.com/microsoft/TRELLIS.2
+# Checkpoint: https://huggingface.co/microsoft/TRELLIS.2-4B
+# Use the official source's current setup and hardware requirements.
+# Setup covers a compatible torch/CUDA stack and selected extensions:
+# flash-attn (or supported attention alternative), nvdiffrast, nvdiffrec,
+# CuMesh, O-Voxel, FlexGEMM, plus the upstream basic Python dependencies.
+# Upstream basic dependencies also include imageio-ffmpeg, easydict, ninja,
+# gradio, tensorboard, pandas, lpips, zstandard, kornia, timm, pillow-simd,
+# imageio, opencv-python-headless, tqdm, trimesh, transformers and utils3d
+# from the upstream-pinned EasternJournalist/utils3d revision. Some builds use libjpeg-dev.
+# Follow https://github.com/microsoft/TRELLIS.2/blob/main/setup.sh for current pins
+# and platform-specific install steps rather than copying another backend's requirements.
+# The reference setup documented at review time uses PyTorch 2.6 / CUDA 12.4,
+# Linux and a large NVIDIA GPU. Other ports/configurations need their own smoke test.
+# Judge this user's hardware; do not assume every user has a low-VRAM PC.
+# Preserve exact source/checkpoint identities, licenses and modification notices.
+
+# OPTIONAL LOCAL HUNYUAN FALLBACK — only when appropriate to the actual task:
+# Install the selected packages in requirements-hunyuan.txt, not every backend at once.
+# Packages: torch, torchvision, diffusers, transformers, accelerate, safetensors,
+# huggingface-hub, omegaconf, einops, trimesh, scipy, scikit-image, pymeshlab,
+# opencv-python, PyYAML, tqdm, requests, Pillow, numpy, packaging, psutil.
+# Known working pair: Python 3.12, torch 2.11.0+cu128 / torchvision 0.26.0+cu128.
+# Official wheel selector: https://pytorch.org/get-started/locally/
+# Source: https://github.com/Tencent-Hunyuan/Hunyuan3D-2
+# Check known compatibility issues with tools/hunyuan_compat.py before inference.
+# Model: https://huggingface.co/tencent/Hunyuan3D-2mini
+# Required files: hunyuan3d-dit-v2-mini/config.yaml and model.fp16.safetensors
+# Known weight size: 3819958234 bytes
+# Known weight SHA256: 3cc66f3bea33e4062b7dbc875ffe1d70c4888914aec3e91b60f94e9bd01b522b
+# Reuse a verified cache before downloading a new copy.
+
+# TRANSITIVE libraries are resolved by the selected backend's installer:
+# filelock, fsspec, Jinja2, MarkupSafe, networkx, sympy, mpmath, typing_extensions,
+# setuptools, tokenizers, regex, importlib_metadata, zipp, ImageIO, tifffile,
+# lazy-loader, certifi, charset-normalizer, idna, urllib3, colorama.
+# Some Windows native packages need a compatible Microsoft Visual C++ runtime;
+# inspect the installed runtime before considering msvc-runtime or an official installer.
+
+# EXTERNAL APPLICATIONS — the user chooses software; these are optional implementations:
+# Blender: https://www.blender.org/download/ (scene helpers tested on 5.2.2 LTS)
+# Krita: https://krita.org/en/download/ (drawing helper only if selected)
+# FFmpeg + FFprobe: https://ffmpeg.org/download.html (assembly, extraction, verification)
+# Other selected software: use its supported native integration and output format.
+# bpy is supplied by Blender; ordinary system Python does not control an editor by itself.
+# No extra editor, GPU driver, CUDA toolkit, server, or paid backend is installed by habit.
+
+# VISION-FIRST REVIEW: use ChatGPT's actual visual inspection of playback and rendered
+# frames as the primary quality gate. No downloadable pose/vision model is mandatory.
+# Optional motion tracking or optical-flow diagnostics can reuse numpy/OpenCV when
+# useful; these flags do not replace semantic visual review or certify anatomy.
+# Avoid installing opencv-python and opencv-python-headless together in one environment.
+
+# Installing packages does not supply AI-host access, computer controls, image generation,
+# speech models, API credentials, credits, correct rigging, or professional animation quality.
+# Only configure a speech/generation backend when needed and actually available.

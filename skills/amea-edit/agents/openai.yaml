@@ -1,0 +1,4 @@
+interface:
+  display_name: "AMEA Animation Editing"
+  short_description: "Edit animation with continuity and timing"
+  default_prompt: "Use $amea-edit to apply my requested animation changes in Krita."
