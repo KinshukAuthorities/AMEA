@@ -78,3 +78,5 @@ AMEA is a skill and helper package. The connected tools and production work dete
 ## License
 
 [MIT](LICENSE). External tools, models, and supplied assets retain their own licenses and terms.
+
+AMEA’s MIT License applies to its authored code and documentation. Third-party tools, services, models, and media remain subject to their own licenses, terms, and rights; AMEA grants no third-party license, key, or activation entitlement. Users are responsible for ensuring that their use of tools and their creation, recreation, uploading, and distribution of content are authorized or otherwise permitted by applicable law. Recreating, modifying, or converting copyrighted material does not itself grant permission to use or distribute it. This notice does not amend the MIT License or any third-party license.
