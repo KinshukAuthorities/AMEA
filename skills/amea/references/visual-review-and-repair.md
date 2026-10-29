@@ -14,6 +14,10 @@ Trace each relevant form through adjacent frames and its attachments. Look for r
 
 For 2D, inspect changing construction and silhouette, joint direction, volume, perspective, feature placement, identity, line/color consistency, depth order and contact. The method of diagnosis depends on the subject; characters and anatomical structures are not mandatory.
 
+Review whole-body relationships as well as individual joints: stance and support, pelvis-to-torso alignment, shoulder and hip attachment, limb spacing, bend direction, and near/far limb readability. Include quiet or neutral poses, compression and extension, and transitions between them. A simplified figure still needs coherent construction; deliberate deformation must be distinguishable from accidental collapse.
+
+For animated effects, follow recognizable components through consecutive frames to check changing form, flow direction, attachment, birth and decay. Inspect acceleration, direction changes, contact and source disappearance where relevant. Compare clean artwork and isolated effect passes with the final composite to find lost silhouettes, incorrect depth or glow leaking across foreground forms. Pixel differences or a changing brightness value alone do not prove the intended effect motion.
+
 Judge performance as well as defects: preparation, force, balance, action spacing, reaction, recovery, gaze, expression, camera readability and temporal continuity. Compare energy, rhythm, variety and emotional or visual purpose with the recorded [brief and performance intent](brief-to-performance.md). Repeated neutral poses, missing responses or weak staging can be wrong even without a technical artifact. Distinguish deliberate stylization, smear drawings, squash/stretch or unsupported motion from unintended faults.
 
 Optional tracking/optical-flow or pose tools can help identify discontinuities and suspect intervals, but anime proportions, occlusion, blur and stylization can make those estimates unreliable. Confirm candidates against the actual images. Do not install another vision model merely to claim computer vision was used when the session already provides suitable visual inspection.
