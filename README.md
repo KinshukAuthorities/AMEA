@@ -12,7 +12,7 @@ AMEA solves it , it provides AI AGENTS guidance, tools and skills which help age
 
 ## Showcases
 
-### BREAKPOINT — Aura Evolved
+### Stickman Animation  ( just 1 prompt ) 
 
 https://github.com/user-attachments/assets/d0e38c69-f001-4be6-9d3b-f005d98415f4
 
