@@ -1,14 +1,13 @@
 # AMEA — Anime Engineer Anything
 
-**An open workflow for authoring editable anime animation with ChatGPT and Blender Grease Pencil.**
+**An open workflow for editable anime with ChatGPT and Blender.**
 
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 [Quick start](#quick-start) · [Capabilities](#capabilities) · [Workflow](#workflow) · [Requirements](#requirements)
 
-AMEA is **2D-only**. Depth comes from constructed perspective, foreshortening and parallax.
 
-Start with a description, reference images, an existing project, or a video. AMEA supplies the skills and instructions for a ChatGPT session that can control the computer, work with files, and inspect the result.
+Start with a description, an existing project, or a video. AMEA supplies the skills and instructions for a ChatGPT session that can control the computer, work with files, and inspect the result.
 
 ## Quick start
 
@@ -23,9 +22,7 @@ cd AMEA
 
 ### 2. Load the instructions
 
-Give your ChatGPT session access to the repository and ask it to read [`skills/amea/SKILL.md`](skills/amea/SKILL.md). Keep the skill folders together.
-
-Alternatively, load [`CHATGPT-AMEA.md`](CHATGPT-AMEA.md) as consolidated instructions. Keep the repository available if helper scripts are needed.
+Give your ChatGPT session access to the repository and ask it to read all the skills.
 
 ### 3. Make your request
 
@@ -33,16 +30,12 @@ Alternatively, load [`CHATGPT-AMEA.md`](CHATGPT-AMEA.md) as consolidated instruc
 Use AMEA: [your request]
 ```
 
-For a new prompt without medium or software choices, AMEA uses **authored drawn 2D in Blender Grease Pencil**. It follows explicit choices and preserves an existing project's medium/software. Attach source material when relevant; it is optional for original animation.
-
 For example:
 
 ```text
-Use AMEA: Create a 12-second 2D anime scene in Blender of a courier landing
+Use AMEA to Create a 12-second 2D anime scene in Blender of a courier landing
 on a rooftop, regaining balance, then looking toward the city. Use changing
 drawn perspectives, expressive whole-body motion and wind in loose clothing.
-Deliver a playable video and editable Grease Pencil project. Author the
-drawings without image or video generation.
 ```
 
 AMEA develops the prompt into design references, timed action and camera choices, reviewed key poses, breakdowns and finished native animation. You do not need to prescribe the production steps. The [drawn-anime guide](skills/amea/references/drawn-anime.md) addresses construction, support, occlusion and secondary motion; the [Blender 2D guide](skills/amea/references/blender-2d.md) explains the native workflow and optional bulk contour helper. These remain creative production workflows, not a one-command guarantee of a particular artistic standard.
@@ -58,16 +51,15 @@ The default 2D workflow combines:
 - **Editable drawings:** authored contours transferred into native Grease Pencil layers and timed exposures.
 - **Visual review and repair:** inspect actual drawings and consecutive motion, correct visible defects, and retest the affected interval.
 
-AMEA provides production guidance and transport tools. Drawing quality and animation quality must be demonstrated in the resulting artwork; successful exports and automated checks do not establish a professional artistic standard.
+AMEA provides production guidance, tools and skills. Drawing quality and animation quality must be demonstrated in the resulting artwork and depends on which agent you use.
 
 | Task | What AMEA does |
 | --- | --- |
-| [Create](skills/amea-create/SKILL.md) | Develop an original animation from your request and optional references. |
-| [Recreate](skills/amea-recreate/SKILL.md) | Rebuild supplied footage with the appearance, action, and timing you want to preserve. |
+| [Create](skills/amea-create/SKILL.md) | Develop an original animation from your request. |
+| [Recreate](skills/amea-recreate/SKILL.md) | Rebuild supplied footage preserving all details or as requested. |
 | [Edit](skills/amea-edit/SKILL.md) | Apply requested changes, insert material, or edit timing, style, framing, text, effects, and sound. |
-| [Convert to 2D](skills/amea/SKILL.md) | Recreate supplied footage as editable 2D animation. |
 
-For faithful recreation, it follows the source. For edits, it preserves unaffected content and carries persistent changes into later scenes. Sound is handled according to the request and context. You do not need to restate continuity, synchronization, review, or export.
+
 
 ## Workflow
 
@@ -90,10 +82,7 @@ Independent work can run in parallel when the host supports it. The agent review
 
 ## Requirements
 
-- A ChatGPT session with file, visual-inspection and selected-software execution tools. Native scripting/CLI can handle supported work without keeping an editor window open; interactive editing needs actual computer control.
-- Image, video or speech generation capabilities only when the selected production method uses them. Editable 2D contour production does not require a generation service.
-- Blender for the default drawn-2D route, or the software explicitly selected or inherited from your project. A genuine unresolved choice outside the default may require clarification.
-- Python 3.10+ for the optional helpers; FFmpeg and FFprobe for helper-based media processing.
+- A ChatGPT session and Blender.
 
 [`requirements.txt`](requirements.txt) is the single dependency file. Its installable baseline supports the image helpers; comments identify optional model dependencies and official setup links. The agent installs only what the chosen workflow needs. Editors, model weights, libraries, and user projects are not bundled.
 
