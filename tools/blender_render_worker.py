@@ -2,6 +2,8 @@
 import argparse,json,os,sys
 from pathlib import Path
 import bpy
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from common import sha256,write_json
 
 def valid_frame(path,size):
     if not path.is_file():return False
@@ -12,6 +14,14 @@ def valid_frame(path,size):
     except Exception:return False
     finally:
         if image is not None:bpy.data.images.remove(image)
+
+def cached_frame(path,size):
+    """The generation identifies inputs; each sidecar identifies exact frame bytes."""
+    sidecar=path.with_suffix('.frame.json')
+    try:
+        record=json.loads(sidecar.read_text(encoding='utf-8'))
+        return record['size']==list(size) and record['sha256']==sha256(path) and valid_frame(path,size)
+    except (OSError,ValueError,KeyError,TypeError):return False
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--run',type=Path,required=True);p.add_argument('--first',type=int,required=True);p.add_argument('--last',type=int,required=True)
@@ -27,10 +37,12 @@ def main():
         if scene.render.engine=='CYCLES':scene.cycles.samples=job['samples']
     for f in range(a.first,a.last+1):
         path=out/f'frame_{f:06d}.png'
-        if valid_frame(path,[job['width'],job['height']]):continue
+        if cached_frame(path,[job['width'],job['height']]):continue
         scene.frame_set(f);temp=out/f'.frame_{f:06d}-{os.getpid()}.png';scene.render.filepath=str(temp)
         bpy.ops.render.render(write_still=True)
         if not valid_frame(temp,[job['width'],job['height']]):raise RuntimeError(f'Invalid rendered frame {f}')
-        os.replace(temp,path);print('AMEA_FRAME_COMPLETE',f,flush=True)
+        os.replace(temp,path)
+        write_json(path.with_suffix('.frame.json'),{'sha256':sha256(path),'size':[job['width'],job['height']]})
+        print('AMEA_FRAME_COMPLETE',f,flush=True)
 
 if __name__=='__main__':main()

@@ -33,6 +33,10 @@ If consecutive retests reproduce substantially the same failure, stop full expor
 
 ## Preserve truthful review records
 
+Choose each new test to settle a concrete production decision. Inspect existing pixels first; reuse sufficient evidence instead of rerunning passed software checks. For a weak drawing, a large affected view and its neighboring construction may be decisive. For a weak launch or turn, use the real consecutive interval and intended timing. More reports, a broad mechanical suite or repeated full exports do not improve artistic evidence. Preserve the specific failed observation and make a cause-led local correction.
+
+Bind contact sheets and extracted review frames to their actual source revision. After a repair, retain old evidence as clearly historical or regenerate only the affected sheet; do not let a stale thumbnail appear to show the current success or failure.
+
 Record the actual visual tool/method, input or output identities, inspected frame ranges, reference images, observations, evidence crops where useful, issue state, correction and retest. A resolved issue needs observations of the new output. Do not copy old review results onto changed frames or let helpers create perceptual pass records automatically.
 
 A review worker may inspect stable exports while another worker produces independent material. Follow [parallel production](parallel-production.md): read-only review inputs, exact artifact revisions, coordinator reconciliation and invalidation after changes. Inspect transitions between independently produced intervals as well as their interiors. Worker confidence or a completion summary is not a substitute for observing the result.

@@ -2,6 +2,8 @@
 
 For 2D designs use [2D assets](2d-assets.md). Use [computer-vision review and repair](visual-review-and-repair.md) throughout rough and finish: inspect actual changing drawings and motion, repair observed defects, and visually retest instead of accepting code measurements as proof of quality.
 
+For changing-pose drawn anime, use [constructed drawn-anime performance](drawn-anime.md) for multi-view keys, attached details, ground projection, coverage, coordinated secondary motion, and a bounded native interval gate before expansion.
+
 ## Interpret and establish references
 
 Use [brief to performance](brief-to-performance.md) to turn the request into a concise production intent and observable shot expectations. Record action, energy/rhythm, emotional or visual purpose, camera treatment, constraints, source fidelity where relevant, duration, delivery stage and allowed creative choices. Record assumptions without turning routine choices into approval requests. A planning-only request ends at planning; a production request continues through the requested deliverable.
@@ -26,7 +28,7 @@ Track volumes, landmarks, contact points, silhouettes, arcs, visibility, and dep
 
 Keep rough construction and key poses editable. While drawing, inspect both neighboring drawings and the relevant bounding key poses with onion skins. Compare against the canonical design as well; a chain of small local errors can drift far from the design. Use separate views or reference images for large perspective changes instead of forcing a 2D overlay to resolve unseen geometry.
 
-For external generation, provide the actual design images, relevant pose references, framing, surrounding drawings, and intended movement through a verified reference-capable tool. Generate and inspect in manageable dependent batches. Register provenance. A sequence of unrelated image prompts does not establish temporal conditioning. A finished video-generation result does not prove that editable intermediate drawings exist.
+Only when an external generation method is explicitly selected, provide the actual design images, relevant pose references, framing, surrounding drawings, and intended movement through a verified reference-capable tool. Generate and inspect in manageable dependent batches and register provenance. This is not the default authored-contour route. Unrelated image prompts do not establish temporal conditioning; generated video does not prove editable intermediate drawings exist.
 
 Prepare a pencil test with the real exposure timing. Watch it at intended speed and inspect drawings individually. Check whether the action reads, weight and contact make sense, the silhouette changes intentionally, and forms retain their identity. Inspect overlaps, occlusions, timing, camera motion and shot transitions. Correct rough animation and retest the affected interval before applying expensive finish. Revisit earlier stages if playback exposes a planning error.
 

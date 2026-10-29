@@ -2,7 +2,7 @@
 
 Use [computer-vision review and repair](visual-review-and-repair.md) as the primary animation-quality gate. Inspect actual playback and consecutive rendered frames, correct observed defects in native work, and visually retest the affected sequence. Code measurements support that process; they cannot close a visible issue by themselves.
 
-Apply these checks to the selected medium and software. Drawing references below apply to drawing workflows; scene production additionally uses the 3D checks below. Do not fabricate a native file or validator pass for an application that was not used.
+Apply these checks to the resolved [canonical workflow](workflow-selection.md). Drawing checks apply to drawn work; the additional mesh/rig checks apply only to selected rendered 3D, not to a Blender scene containing Grease Pencil drawings. Do not fabricate a native file or validator pass for an application that was not used.
 
 Review the actual artifacts at each requested stage. Automated checks can find corrupt images, missing files, repeated pixel content, timeline gaps, stale records, and absent deliverables. They cannot establish good drawing, appropriate performance, convincing motion, or faithful understanding.
 
@@ -29,9 +29,9 @@ Reopen native documents in the selected software and verify useful editing struc
 
 ## Evidence and honesty
 
-Keep per-shot review records bound to current drawings, timing, native files, and relevant project inputs using the helper's fingerprint command. Recompute and review after modifying those inputs. Final reviews also bind the final output and registered audio assets. Exporting references or calculating fingerprints does not count as reviewing them.
+Keep review records bound to current drawings, timing, native files and relevant inputs, including output/audio for final review. Use the cross-software `tools/delivery_gate.py` fingerprint command or equivalent revision-bound native evidence. The Krita helper's per-shot fingerprint format applies only to selected Krita work. Recompute and perform the affected review after changes; exporting references or calculating hashes does not count as reviewing them.
 
-The validator's `structural_passed` reports only mechanical integrity. `recorded_reviews_current` reports whether pass records with observations exist for the current fingerprints. Neither result certifies truthful observations or artistic quality. A set of transformed stills can still defeat structural checks; reject it through actual comparison with the requested motion plan.
+For the Krita-only helper, `structural_passed` means mechanical integrity and `recorded_reviews_current` means current pass records exist. Cross-software acceptance instead uses its own `recorded_acceptance_current` result; Blender transport reports native compilation only. None certifies truthful observations or artistic quality. Do not require an unrelated helper's fields to approve a different application. Reject transformed stills that fail the requested performance through actual visual comparison, even if structural checks pass.
 
 If quality is insufficient, revise the affected drawings and dependencies. If a required capability is missing, deliver a truthful checkpoint with the remaining work identified. Do not label planning, generated stills, source re-encoding, or unreviewed roughs as a completed drawn animation.
 

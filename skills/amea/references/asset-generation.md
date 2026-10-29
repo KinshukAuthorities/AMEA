@@ -1,5 +1,7 @@
 # Asset references, online generation, and user-selected alternatives
 
+Read this only for an asset-generation task selected under [canonical workflow selection](workflow-selection.md). These generation and service-fallback instructions do not select the default animation method. Authored drawn 2D creates its own construction references and editable poses without requiring image/video generation or a 3D mesh.
+
 ## Use the right inputs
 
 Use relevant asset images supplied by the user as the design authority. Inspect them before changing or regenerating anything. Reuse accepted references already in the project. If images are missing, create a consistent reference set with an actually available image-generation or drawing tool, using the brief and any supplied visual constraints. Do not make the user supply images the agent can create itself. If that capability is unavailable, explain the specific gap and request the needed input.
@@ -8,7 +10,7 @@ Prepare clean, reusable asset images and preserve their identity, prompts where 
 
 ## Preferred starting point for 3D
 
-Prefer **TRELLIS.2** as the first candidate for image-to-3D assets, especially when a hosted run can provide geometry and PBR materials without a local installation. This is the user's preferred starting point, not a claim that one model wins every task. Let actual reference fidelity, topology/material needs, access, reliability, time, and resource constraints guide the final choice. Test the produced asset rather than judging it only by model reputation.
+For a selected image-to-3D task, prefer **TRELLIS.2** as the first candidate, especially when a hosted run can provide geometry and PBR materials without a local installation. This is a 3D route preference, not a requirement for drawn animation or a claim that one model wins every task. Let actual reference fidelity, topology/material needs, access, reliability, time, and resource constraints guide the final choice. Test the produced asset rather than judging it only by model reputation.
 
 Official discovery links that the agent must know:
 

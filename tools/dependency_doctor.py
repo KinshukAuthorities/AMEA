@@ -14,8 +14,8 @@ def inspect(profile='drawing',deep=False):
         'profile':profile,'versions':versions,'missing_packages':missing,'logical_cpus':os.cpu_count(),
         'free_bytes':shutil.disk_usage(Path.cwd()).free,
         'available_optional_tools':{n:discover(n) for n in ['blender','krita','ffmpeg','ffprobe']},
-        'preferences':'Reuse established choices; ask for missing 2D/3D and software preferences before production.',
-        'gui_control':'Not tested','image_generation':'Verify host capability; not supplied by pip',
+        'preferences':'Use canonical workflow-selection.md: explicit/inherited choices first; otherwise authored drawn 2D in Blender. Ask only genuinely unresolved choices.',
+        'gui_control':'Not tested','image_generation':'Optional for a selected generation task; not needed by default authored 2D and not supplied by pip',
         'speech_generation':'Not configured; not mandatory','artistic_quality':'Not tested','smoke_checks':{}}
     if profile=='trellis':report['backend_runtime']='Native extensions, source imports and real generation still require testing in the selected TRELLIS.2 environment.'
     if deep:

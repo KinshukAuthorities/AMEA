@@ -36,6 +36,17 @@ def frame_valid(path,size):
         return True
     except (OSError,ValueError):return False
 
+def cached_frame_valid(path,size):
+    try:
+        record=json.loads(path.with_suffix('.frame.json').read_text(encoding='utf-8'))
+        return record['size']==list(size) and record['sha256']==sha256(path) and frame_valid(path,size)
+    except (OSError,ValueError,KeyError,TypeError):return False
+
+def assert_current_inputs(identity):
+    for item in identity['inputs']:
+        if sha256(item['file'])!=item['sha256']:
+            raise RuntimeError('Production input changed during this render; preserve this generation and render the new revision')
+
 def encode(run_dir,job,base,ffmpeg,ffprobe):
     count=job['end']-job['start']+1;rate=Fraction(str(job['fps']));duration=float(count/rate)
     video=run_dir/'animation.mp4';temp=run_dir/'animation.encoding.mp4'
@@ -59,10 +70,11 @@ def encode(run_dir,job,base,ffmpeg,ffprobe):
     if abs(float(v['duration'])-duration)>.002:raise RuntimeError('Encoded duration mismatch')
     audio=next((s for s in info['streams'] if s['codec_type']=='audio'),None)
     if bool(audio)!=bool(job.get('audio_mix')):raise RuntimeError('Encoded audio presence mismatch')
+    call([ffmpeg,'-v','error','-xerror','-nostdin','-i',str(temp),'-f','null','-'])
     os.replace(temp,video)
     report={'video':video.name,'sha256':sha256(video),'decoded_frames':count,'fps':str(rate),
             'seconds':float(v['duration']),'resolution':[v['width'],v['height']],
-            'audio_seconds':float(audio['duration']) if audio else None,'visual_review':'pending','listening_review':'pending' if audio else 'not applicable'}
+            'audio_seconds':float(audio['duration']) if audio else None,'full_decode_passed':True,'visual_review':'pending','listening_review':'pending' if audio else 'not applicable'}
     write_json(run_dir/'delivery-checks.json',report)
     selections=sorted(set(job.get('review_frames',[])))
     if any(type(f) is not int or not job['start']<=f<=job['end'] for f in selections):raise ValueError('Invalid review frame selection')
@@ -86,9 +98,10 @@ def render(path,blender=None,workers=1,threads=4,ffmpeg=None,ffprobe=None):
     total=job['end']-job['start']+1;workers=min(workers,total);chunk=math.ceil(total/workers)
     processes=[];started=time.monotonic()
     try:
+        assert_current_inputs(identity)
         for i,first in enumerate(range(job['start'],job['end']+1,chunk)):
             last=min(job['end'],first+chunk-1);log=(run_dir/f'worker-{i+1}.log').open('w',encoding='utf-8')
-            cmd=[executable,'-b',str(scene),'-t',str(threads),'--python',str(helper),'--','--run',str(run_dir/'run.json'),'--first',str(first),'--last',str(last)]
+            cmd=[executable,'-b',str(scene),'-t',str(threads),'--python-exit-code','1','--python',str(helper),'--','--run',str(run_dir/'run.json'),'--first',str(first),'--last',str(last)]
             try:process=subprocess.Popen(cmd,stdout=log,stderr=subprocess.STDOUT)
             except Exception:log.close();raise
             processes.append((process,log))
@@ -102,13 +115,15 @@ def render(path,blender=None,workers=1,threads=4,ffmpeg=None,ffprobe=None):
         for p,log in processes:
             if p.poll() is None:p.terminate();p.wait(timeout=20)
             log.close()
-    missing=[f for f in range(job['start'],job['end']+1) if not frame_valid(run_dir/f'frames/frame_{f:06d}.png',[job['width'],job['height']])]
+    assert_current_inputs(identity)
+    missing=[f for f in range(job['start'],job['end']+1) if not cached_frame_valid(run_dir/f'frames/frame_{f:06d}.png',[job['width'],job['height']])]
     if missing:raise RuntimeError(f'Invalid/missing frames: {missing[:20]}')
     result={'generation':str(run_dir),'frames':total,'render_seconds':round(time.monotonic()-started,3),'artistic_review':'pending'}
     if job.get('encode',True):
         encoder=discover('ffmpeg',ffmpeg);probe=discover('ffprobe',ffprobe)
         if not encoder or not probe:raise FileNotFoundError('FFmpeg and FFprobe are required for encoding; rendered frames are preserved')
         result['delivery']=encode(run_dir,job,base,encoder,probe)
+    assert_current_inputs(identity)
     write_json(run_dir/'status.json',result);return result
 
 if __name__=='__main__':

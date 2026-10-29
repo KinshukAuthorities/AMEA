@@ -31,6 +31,8 @@ Store the following information in the authoritative shot record at the detail n
 
 Camera movement should reveal or support the relevant performance, maintain useful spatial relationships and fit the desired rhythm. A deliberate locked camera is valid. Moving cameras need coherent paths and timing, with framing checked across the shot rather than only at keys. Avoid arbitrary cuts or orbiting that obscure causality, compress important actions out of view or disguise limited movement.
 
+Name what each camera beat reveals. A rear shoulder can establish geography or anticipation, but if it hides the hand, torso response and support at the decisive beat, revise the staging. Judge near/far scale, visible upper or lower planes and useful negative space in the actual drawing; a front/rear camera label and correct painter order alone do not establish depth. For energetic action, read the compression, loaded support, pelvis/ribcage opposition, release, travel and recovery in the changing whole-body silhouette before effects are added.
+
 Story/action and camera workers can plan while assets are built, using labeled proxies and a shared coordinate/timing contract. Fit the plan to actual accepted proportions, reach, deformation limits, materials and controls before committing dependent animation. Read [parallel production](parallel-production.md) for ownership and handoffs, and [motion and contact](motion-and-contact.md) for mechanics.
 
 ## Prove the performance before finishing

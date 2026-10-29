@@ -2,9 +2,11 @@
 
 AMEA contains authored skills, references and helpers. It does not ship Python, libraries, editors, downloaded generator source or model weights. `requirements.txt` is the single dependency file: its installable baseline supports image helpers, and comments identify optional backend dependencies and official setup links. Install only what the chosen workflow needs.
 
-Establish missing medium/software preferences before production and reuse earlier choices. Discover the selected editor and its supported controls. Run `python tools/dependency_doctor.py` with available Python to inspect helper dependencies and optional tools; this report does not prove GUI access or animation capability.
+Resolve medium/software/method through [canonical workflow selection](workflow-selection.md), using its authored-2D/Blender default where no explicit or inherited choice exists. Discover that editor and its supported controls. Run `python tools/dependency_doctor.py` with available Python to inspect helper dependencies and optional tools; this report does not prove GUI access or animation capability.
 
 ## Generation access and user choice
+
+This section applies only after a generation method is selected. Default authored 2D needs no image/video generator, model download, hosted account or generator-choice question. Missing access to such services is not a blocker for that route.
 
 Prefer suitable hosted TRELLIS.2 for new 3D assets; read [asset generation](asset-generation.md) before setup. Use supplied images or create missing references with available tools. A hosted GLB export needs no local inference framework or checkpoint.
 
@@ -23,3 +25,5 @@ Before scaling, demonstrate the production route appropriate to the requested st
 ## Helper boundaries
 
 `amea_project.py` manages the optional Krita drawing evidence/timing contract; it does not draw or control the UI. Blender rendering and audit helpers run through the selected Blender executable. For another editor use its supported native tools and equivalent evidence. Helpers do not certify artistic quality, source fidelity, contact or subjective audio review.
+
+For Blender-selected 2D, `tools/blender_2d.py` transports authored contours, painter order and exposures into editable Grease Pencil drawings; read [Blender 2D execution](blender-2d.md) for its version calibration and source contract. It uses Blender's bundled Python without an additional inference stack. It supplies neither character design nor a performance generator. Keep project-specific art, recordings, reviews and source manifests outside the AMEA package. The render queue consumes a stable saved native file; compilation and rendering are separate operations.

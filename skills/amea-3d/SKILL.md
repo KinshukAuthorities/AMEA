@@ -5,9 +5,11 @@ description: Build and animate original or source-guided 3D anime scenes in the 
 
 # AMEA 3D Production
 
+Use this route only for explicitly requested 3D or an existing 3D project under [canonical workflow selection](../amea/references/workflow-selection.md). Depth or camera perspective in a drawn-2D brief does not select this route.
+
 Honor the requested subject and result; characters and organic rigs are optional. Read [asset generation](../amea/references/asset-generation.md), [3D asset production](../amea/references/3d-production.md), [motion and interaction](../amea/references/motion-and-contact.md), [performance](../amea/references/performance.md), [review](../amea/references/review.md), and [3D project format](../amea/references/3d-format.md). Read [runtime](../amea/references/runtime.md) for local setup and [audio](../amea/references/audio.md) for timing.
 
-Reuse the user's established software choice. If absent, ask before production along with any missing 2D/3D preference. Native scene and scripting operations depend on that choice. Blender-specific helpers are optional and do not authorize switching applications.
+Reuse the user's established 3D software choice. If absent and not delegated, ask for that software choice before dependent production. Do not ask again whether the explicitly requested medium is 3D. Native scene and scripting operations depend on the resolved choice; helpers do not authorize switching applications.
 
 Read [brief to performance](../amea/references/brief-to-performance.md) and [parallel production workers](../amea/references/parallel-production.md). Overlap asset/reference creation with story/action/camera planning and independent setup or sound work. Plan on labeled proxies, then fit final poses, reach, contact and framing to accepted real geometry and rigs. Use separate file ownership and one desktop-input queue.
 
@@ -17,9 +19,9 @@ Prioritize [computer-vision review and repair](../amea/references/visual-review-
 
 Choose and record the style, proportions, coordinate basis, scale, materials, construction, and required views. Compare actual neutral renders and representative expressions against stable references. More surface detail cannot repair incorrect structure or silhouette. For original assets, author geometry and rigs; use existing or supplied assets only when consistent with the brief and permissions. Generation model weights are tools, not ready-made scene assets.
 
-Use supplied asset images or create missing references with an available image/drawing tool. Prefer TRELLIS.2 as the first image-to-3D candidate, trying its official hosted workflow before a local install unless the user's constraints favor local processing. Export and inspect the actual GLB. On a concrete access blocker, offer user generation from the prepared images and GLB handoff or a hardware-appropriate local setup. Reuse an established choice. Select another suitable method when context warrants it; do not lock the project to one model.
+Author suitable native geometry and rigs or reuse permitted assets for the selected 3D task. If image-to-3D generation is separately selected, use supplied images or create missing references, then prefer TRELLIS.2 as a candidate when suitable. In that generation route, try the official hosted workflow before local setup unless constraints favor local work, and export/inspect the actual GLB. Generation and its access requirements are not mandatory for native 3D authoring or default drawn 2D.
 
-If the required model or generation route cannot be used, explain the blocker, offer relevant available routes and wait for the user's choice before switching methods or setting up a local model. Reuse an existing choice. A hosted or locally generated GLB does not guarantee good topology, likeness, a rig or correct deformation. Inspect those before animation, and adapt selected local setup to the current user's hardware.
+If an explicitly selected generation method requires an unavailable model or service, explain the blocker and wait for the user's choice before switching that requested method or installing a local stack. Reuse an existing choice. A generated GLB does not guarantee topology, likeness, a rig or correct deformation; inspect those before animation. An unavailable generator does not block a task already using native modeling.
 
 ## Build a performance-ready scene
 

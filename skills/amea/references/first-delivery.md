@@ -8,7 +8,7 @@ Preserve the original request, subsequent corrections and supplied references in
 
 For each material requirement record what would demonstrate success and where it will be checked in the actual artifact. Link it to shots/assets or output intervals. Keep one record with the existing brief/shot plan rather than creating competing specifications. Before delivery, compare that record against the original request again; a perfectly checked list can still omit a requested feature.
 
-Reuse established preferences and reference authority. Infer reversible creative choices and routine production decisions. Ask one concise, bundled question only for missing essential choices or an actual access/scope decision. If the user delegates medium/software selection, choose suitably and proceed. An internal quality gate is not a request for repeated user approval.
+Resolve the route through [canonical workflow selection](workflow-selection.md), reusing explicit/inherited preferences or its documented authored-2D/Blender default. Preserve reference authority and infer reversible creative choices. Ask one concise question only for an essential decision that the resolved contract does not cover or an actual access/scope change. An internal quality gate is not a request for repeated user approval.
 
 ## Demonstrate the actual production route early
 

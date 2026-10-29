@@ -1,5 +1,7 @@
 # 2D designs, references, and animation assets
 
+Follow [canonical workflow selection](workflow-selection.md). The default is agent-authored constructed drawings, entered as editable contours through the selected native tools. Generation, tracing and cutout production are explicit alternatives, not equal candidates to reconsider for each shot.
+
 ## What a 2D model means
 
 Traditional frame-by-frame 2D animation does not require a 3D mesh or a downloadable character-generation neural model. A model sheet is a consistent visual design reference: relevant views, proportions, construction, distinguishing features, expressions, palette and material/line treatment. A layered 2D puppet with deformation controls is optional and belongs to a different animation method. Do not confuse either meaning with the AI model used to generate an image.
@@ -8,13 +10,15 @@ Use the method appropriate to the brief and selected software. Do not run a 3D a
 
 ## Establish artwork that actually matches the brief
 
-Use provided reference images first. Gather relevant references with provenance or create missing references with ChatGPT's available image-generation or drawing tools. Inspect the actual result for silhouette, structure, feature placement, proportions, costume or surface design, palette, style and required views. Keep one accepted design authority instead of independently reinventing the subject in each image.
+Use provided reference images first. Gather relevant references with provenance or author missing construction views with the default drawing method. Use image generation only when selected or authorized for that purpose. Inspect the actual result for silhouette, structure, feature placement, proportions, costume or surface design, palette, style and required views. Keep one accepted design authority instead of independently reinventing the subject in each image.
 
-For detailed illustrative references, use an appropriate drawing or image-generation method. Programmatic primitive shapes can support layout, pose blocking or an intentionally geometric style; they are not an adequate finished substitute for requested detailed anatomy, expressive faces or faithful likeness. More contours or higher resolution cannot repair incorrect design.
+For detailed illustrative work, author the actual contours, facial construction, line hierarchy and shading shapes. Programmatic entry of those authored paths is supported; it must still pass visual inspection. Primitive geometric blockouts alone are not an adequate finished substitute for detailed anatomy, expressive faces or faithful likeness unless the brief requests a geometric style. More contours or higher resolution cannot repair incorrect design.
 
-The native image tool is the preferred image-generation path when available. No particular downloadable 2D model is mandatory. Record the actual tool/model when exposed, and do not claim that a named neural generator produced code-authored drawings. Inspect generated references before proceeding; image generation is not an automatic fidelity guarantee.
+If image generation is explicitly selected for references or an alternative production method, prefer the available native image tool. That preference selects a tool inside the chosen generation task; it does not select generation over authored drawing. No downloadable 2D model is mandatory. Record the actual method and inspect the result; generation is not an automatic fidelity guarantee.
 
 Choose needed views, expression references and construction details from the actual subject and action. Preserve consistency between views. Save accepted references in the project, and revise them deliberately if a design changes. Model sheets do not need to be assembled for subjects that do not benefit from them.
+
+For a changing-pose drawn workflow, use [constructed drawn-anime performance](drawn-anime.md) to approve keys across the actual shot views before breakdowns, maintain feature visibility and parent-attached detail, and reuse exact accepted drawings with explicit exposures.
 
 ## Turn references into a performance
 

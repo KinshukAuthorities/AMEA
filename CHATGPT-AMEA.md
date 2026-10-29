@@ -1,6 +1,6 @@
 # AMEA — ChatGPT Animation Production Instructions
 
-For ChatGPT sessions with verified computer-control, visual-inspection and workspace tools. Load these instructions, then activate with `Use AMEA:` followed by the user's request. Choose original creation, reconstruction, editing, or a combination from intent. No source video is required for original animation. The included sections supply all skill instructions and references. Local helper scripts remain in the AMEA bundle. Overlap independent asset work, story/action/camera planning, setup, sound planning and review with actual available permitted workers. Coordinate shared revisions, dependencies, native-file ownership and desktop input. Infer performance intent from the brief and verify it in moving roughs. Track material request requirements, prove the actual method at the requested stage before scaling, and compare the delivered result against the original request after internal corrections. Ask for missing 2D/3D and software preferences; reuse established choices. Prefer TRELLIS.2 as the first 3D asset-generation candidate, trying its official hosted workflow when suitable. Use supplied images or create missing references. If the required model or online route is unavailable, explain the blocker, ask which available alternative the user wants, and wait before switching methods, installing an inference stack or downloading a local model. Reuse an existing choice. Computer-vision review of actual playback and rendered frames is the primary quality check; code measurements only support it. Instructions do not grant editor control, media access, image generation, speech tools, credentials or paid-service access. No dependencies or weights are bundled.
+For ChatGPT sessions with verified computer-control, visual-inspection and workspace tools. Load these instructions, then activate with `Use AMEA:` followed by the user's request. Choose original creation, reconstruction, editing, or a combination from intent. No source video is required for original animation. The included sections supply all skill instructions and references. Local helper scripts remain in the AMEA bundle. Overlap independent asset work, story/action/camera planning, setup, sound planning and review with actual available permitted workers. Coordinate shared revisions, dependencies, native-file ownership and desktop input. Infer performance intent from the brief and verify it in moving roughs. Track material request requirements, prove the actual method at the requested stage before scaling, and compare the delivered result against the original request after internal corrections. Read the canonical workflow-selection section first: new unspecified anime requests use authored drawn 2D in Blender Grease Pencil. Explicit user choices and existing project medium/software take precedence. Construction, changing poses and consecutive native review are the default; generation, tracing, cutout and 3D methods are explicit alternatives. Default authored 2D requires no generation service. For selected 3D asset generation, prefer TRELLIS.2 when suitable. If an explicitly selected generation method's required model or online route is unavailable, explain the blocker, ask which available alternative the user wants, and wait before switching methods, installing an inference stack or downloading a local model. Reuse an existing choice. Computer-vision review of actual playback and rendered frames is the primary quality check; code measurements only support it. Instructions do not grant editor control, media access, image generation, speech tools, credentials or paid-service access. No dependencies or weights are bundled.
 
 
 ---
@@ -15,6 +15,8 @@ Interpret the user's animation request and carry it through the requested stage 
 
 Activation is `Use AMEA:` followed by the request, after these instructions are loaded. The user need not restate continuity, preservation of unaffected content, synchronization, visual review, or export. Perform routine production choices and internal corrections without unnecessary approval pauses.
 
+Read canonical workflow selection (included section `skills/amea/references/workflow-selection.md`) first. It is the routing authority within AMEA: new unspecified anime requests use constructed drawn 2D in Blender Grease Pencil with agent-authored editable contours. Explicit user requirements and an existing project's medium/software take precedence. Other method guides are conditional, not competing defaults.
+
 Read first-delivery acceptance (included section `skills/amea/references/first-delivery.md`) before production. Preserve the request, track its material requirements through actual evidence, prove the intended route with a representative test appropriate to the requested stage before scaling, and compare the integrated result against the original brief. Final-production requests need a test of the finished method; planning-only or rough-only requests stop at their requested stage. Aim for a satisfactory first delivery through internal iteration; do not make the user discover defects or promise guaranteed satisfaction.
 
 ## Route by intent
@@ -22,15 +24,15 @@ Read first-delivery acceptance (included section `skills/amea/references/first-d
 - Original animation: read amea-create (included section `skills/amea-create/SKILL.md`). References may guide the design without making the task a reconstruction.
 - Faithful reconstruction of supplied animation: read amea-recreate (included section `skills/amea-recreate/SKILL.md`).
 - Changes to existing animation: read amea-edit (included section `skills/amea-edit/SKILL.md`).
-- Before production, establish 2D/3D preference and the user's preferred software. Reuse an explicit choice already supplied in the conversation or project. If either is unspecified, ask for the missing preference together in one concise question; do not silently default to 2D, Krita, or Blender. Read software selection (included section `skills/amea/references/software-selection.md`).
+- Resolve medium, software and method through canonical workflow selection (included section `skills/amea/references/workflow-selection.md`) and record them. Reuse explicit or inherited choices; otherwise use the documented drawn-2D/Blender default. Read software selection (included section `skills/amea/references/software-selection.md`) for capability checks and genuine unresolved choices.
 - For 3D work also read 3D production (included section `skills/amea-3d/SKILL.md`), using the selected software and editable scene assets. For 2D use the drawing references below, adapting execution to the selected application. Preserve an existing project's medium unless conversion is requested.
 - Combine modes when different shots require different work. Video attachment alone does not determine intent. If an essential input is missing, continue independent planning and ask only for that input.
 
-Read 2D design and assets (included section `skills/amea/references/2d-assets.md`), production (included section `skills/amea/references/production.md`) and review (included section `skills/amea/references/review.md`) for drawing work, plus Krita execution (included section `skills/amea/references/krita.md`) only when Krita is selected. Read asset generation (included section `skills/amea/references/asset-generation.md`) when creating references or 3D assets, source analysis (included section `skills/amea/references/source-analysis.md`) for source media, and audio (included section `skills/amea/references/audio.md`) for sound. The drawing helper format (included section `skills/amea/references/project-format.md`) applies only to its supported workflow.
+Read 2D design and assets (included section `skills/amea/references/2d-assets.md`), drawn anime construction (included section `skills/amea/references/drawn-anime.md`), production (included section `skills/amea/references/production.md`) and review (included section `skills/amea/references/review.md`) for drawing work. Read Blender 2D execution (included section `skills/amea/references/blender-2d.md`) when Blender is selected, or Krita execution (included section `skills/amea/references/krita.md`) when Krita is selected. Read asset generation (included section `skills/amea/references/asset-generation.md`) when creating references or 3D assets, source analysis (included section `skills/amea/references/source-analysis.md`) for source media, and audio (included section `skills/amea/references/audio.md`) for sound. The drawing helper format (included section `skills/amea/references/project-format.md`) applies only to its supported workflow.
 
 ## Production defaults
 
-Use the selected software for the chosen medium. Krita and Blender have optional execution helpers; they are not mandatory editors. Read brief to performance (included section `skills/amea/references/brief-to-performance.md`) to carry the user's intended energy, pacing, complexity and emotion into visible action and purposeful camera treatment without requiring repeated prompting. Establish consistent design references, shot layout, action plan, key poses, breakdowns and inbetweens appropriate to the requested motion. Preview rough animation against that intent and correct it before cleanup and finish. Preserve useful native assets and timing. For scenes use the 3D project format (included section `skills/amea/references/3d-format.md`); do not fabricate drawing records for rigged animation.
+Use the resolved software and method. Blender Grease Pencil is the default 2D implementation; explicit or inherited editor choices remain valid. Read brief to performance (included section `skills/amea/references/brief-to-performance.md`) to carry the user's intended energy, pacing, complexity and emotion into visible action and purposeful camera treatment without requiring repeated prompting. Establish consistent design references, shot layout, action plan, key poses, breakdowns and inbetweens appropriate to the requested motion. Preview rough animation against that intent and correct it before cleanup and finish. Preserve useful native assets and timing. Use the 3D project format (included section `skills/amea/references/3d-format.md`) for selected rigged/mesh scene production, and the Blender 2D contract (included section `skills/amea/references/blender-2d.md`) for drawn native transport. Do not fabricate drawing records for rigged animation or rig records for drawn work.
 
 For multistep work read parallel production workers (included section `skills/amea/references/parallel-production.md`) early. Use available permitted workers to overlap asset preparation, story/action/camera planning, setup, sound planning and review where dependencies allow. One coordinator maintains the shared brief, revisions and timeline; give each native file one writer and desktop input one owner. Use actual async jobs/processes when agent workers are unavailable, and report the real execution method. Do not wait for asset generation before starting independent planning.
 
@@ -44,9 +46,9 @@ Read editing and styling (included section `skills/amea/references/editing-and-s
 
 ## Execute and resume
 
-For new 3D assets, prefer TRELLIS.2 as the first candidate and use suitable online generation before local setup unless context favors local/offline work. Follow asset generation (included section `skills/amea/references/asset-generation.md`) for supplied or missing images, official hosted links, GLB export, blocked-service handoff, and hardware-aware alternatives. The preference is a starting point rather than a mandatory backend.
+Only for a selected 3D asset-generation route, prefer TRELLIS.2 as the first candidate and use suitable online generation before local setup unless context favors local/offline work. Follow asset generation (included section `skills/amea/references/asset-generation.md`) for supplied or missing images, official hosted links, GLB export, blocked-service handoff, and hardware-aware alternatives. This does not apply to default authored 2D.
 
-If the required model or generation route is unavailable, or online access is blocked, explain the blocker and ask the user which available alternative to use. Wait for their choice before switching methods or setting up a local model. Reuse a choice already supplied. Continue independent planning while waiting; do not assume a fallback from installed tools.
+If an explicitly selected generation route requires an unavailable model or blocked online service, explain the blocker and ask which available alternative to use. Wait before changing that requested method or setting up a local model. Reuse a choice already supplied. Do not introduce this generation dependency into the authored 2D route.
 
 Read runtime (included section `skills/amea/references/runtime.md`) before setup. The package includes authored helpers, not downloaded libraries, editors, generator source, or model weights. `requirements.txt` is the single dependency catalog. For hosted generation, install no local inference stack. For selected local work, run the dependency doctor with available Python, reuse compatible installations, and install only missing requirements in an isolated environment. Do not modify unrelated projects, repeatedly download existing weights, or start an unrelated server by habit. Verify actual host controls and capabilities.
 
@@ -75,7 +77,9 @@ Included section: `skills/amea-create/SKILL.md`
 
 # AMEA Original Animation
 
-For 2D use the production workflow (included section `skills/amea/references/production.md`), plus the Krita guide (included section `skills/amea/references/krita.md`) and drawing helper format (included section `skills/amea/references/project-format.md`) only when applicable. For 3D use AMEA 3D (included section `skills/amea-3d/SKILL.md`). Read asset generation (included section `skills/amea/references/asset-generation.md`) for missing references and new assets, review (included section `skills/amea/references/review.md`), and audio (included section `skills/amea/references/audio.md`) for sound timing. Establish missing medium/software preferences before production and reuse choices already given.
+Select the method using canonical workflow selection (included section `skills/amea/references/workflow-selection.md`). A new unspecified anime brief uses authored drawn 2D in Blender Grease Pencil; generation and cutout methods require an explicit selection. Do not restart software selection or choose an alternate backend independently.
+
+For 2D use the production workflow (included section `skills/amea/references/production.md`) and drawn anime construction (included section `skills/amea/references/drawn-anime.md`). Use Blender 2D execution (included section `skills/amea/references/blender-2d.md`) for Blender, or the Krita guide (included section `skills/amea/references/krita.md`) and drawing helper format (included section `skills/amea/references/project-format.md`) for selected Krita work. For selected 3D use AMEA 3D (included section `skills/amea-3d/SKILL.md`). Read asset generation (included section `skills/amea/references/asset-generation.md`) only for an applicable selected generation method, review (included section `skills/amea/references/review.md`), and audio (included section `skills/amea/references/audio.md`) for sound timing. Inherit resolved medium/software/method choices from the shared contract.
 
 Develop the user's brief into animation. Accept text, sketches, designs, images, audio, or partial work as optional starting material. A source video is not a prerequisite. Retain the user's designs and creative constraints; distinguish supplied facts from newly chosen creative decisions.
 
@@ -98,7 +102,11 @@ Included section: `skills/amea-recreate/SKILL.md`
 
 # AMEA Animation Reconstruction
 
-Read source analysis (included section `skills/amea/references/source-analysis.md`) and review (included section `skills/amea/references/review.md`). For 2D use production (included section `skills/amea/references/production.md`), with Krita (included section `skills/amea/references/krita.md`) and the drawing helper format (included section `skills/amea/references/project-format.md`) only when applicable. For 3D use AMEA 3D (included section `skills/amea-3d/SKILL.md`). Read asset generation (included section `skills/amea/references/asset-generation.md`) for required new assets and audio (included section `skills/amea/references/audio.md`) for sound. Reuse established medium/software choices and ask only for missing preferences.
+Use canonical workflow selection (included section `skills/amea/references/workflow-selection.md`). Reuse explicit or inherited medium/software; otherwise use authored drawn 2D in Blender Grease Pencil. Inspect supplied footage without treating its attachment as permission to select generated-frame production or rendered 3D.
+
+For Blender-selected drawn reconstruction use Blender 2D execution (included section `skills/amea/references/blender-2d.md`) and drawn anime construction (included section `skills/amea/references/drawn-anime.md`). Preserve the source's observed design, performance and exposure timing rather than treating the helper's geometry as a style template.
+
+Read source analysis (included section `skills/amea/references/source-analysis.md`) and review (included section `skills/amea/references/review.md`). For 2D use production (included section `skills/amea/references/production.md`) and the selected application's execution guide; the Krita drawing helper format (included section `skills/amea/references/project-format.md`) applies only to Krita. For selected 3D use AMEA 3D (included section `skills/amea-3d/SKILL.md`). Read asset generation (included section `skills/amea/references/asset-generation.md`) only for an applicable selected generation method and audio (included section `skills/amea/references/audio.md`) for sound. Inherit the resolved production contract.
 
 Determine what the user wants reproduced: appearance, performed movement, staging, timing, soundtrack, or another specified aspect. For drawn reconstruction, analyze and rebuild the animation with editable drawings. Retaining source frames or re-encoding their video is media reuse; disclose it accurately and do not present it as redrawn animation.
 
@@ -117,7 +125,11 @@ Included section: `skills/amea-edit/SKILL.md`
 
 # AMEA Animation Editing
 
-Read source analysis (included section `skills/amea/references/source-analysis.md`), editing and styling (included section `skills/amea/references/editing-and-styling.md`), and review (included section `skills/amea/references/review.md`). For 2D use production (included section `skills/amea/references/production.md`), with Krita (included section `skills/amea/references/krita.md`) and the drawing helper format (included section `skills/amea/references/project-format.md`) only when applicable; for 3D use AMEA 3D (included section `skills/amea-3d/SKILL.md`). Read asset generation (included section `skills/amea/references/asset-generation.md`) for required new assets and audio (included section `skills/amea/references/audio.md`) for sound. Reuse established medium/software choices and ask only for missing preferences.
+Use canonical workflow selection (included section `skills/amea/references/workflow-selection.md`) and preserve the existing project's medium/software unless conversion is requested. Apply the current drawn workflow to newly authored 2D movement; do not switch the project to a generation or cutout method merely because those tools are available.
+
+For Blender-selected drawn work use Blender 2D execution (included section `skills/amea/references/blender-2d.md`); use drawn anime construction (included section `skills/amea/references/drawn-anime.md`) when the edit changes poses or views. A finishing-only edit preserves the existing performance unless changes are requested.
+
+Read source analysis (included section `skills/amea/references/source-analysis.md`), editing and styling (included section `skills/amea/references/editing-and-styling.md`), and review (included section `skills/amea/references/review.md`). For 2D use production (included section `skills/amea/references/production.md`) and the selected application's execution guide; the Krita drawing helper format (included section `skills/amea/references/project-format.md`) applies only to Krita. For 3D use AMEA 3D (included section `skills/amea-3d/SKILL.md`). Read asset generation (included section `skills/amea/references/asset-generation.md`) only for an applicable selected generation method and audio (included section `skills/amea/references/audio.md`) for sound. Inherit the resolved method rather than starting a competing preference flow.
 
 Interpret the requested changes in the full context of the existing animation. Infer implementation choices, preservation of unaffected content, continuity, synchronization, and requested output delivery without making the user repeat them. A source video, native drawing or scene, frame sequence, or existing AMEA project can supply the starting point.
 
@@ -138,9 +150,11 @@ Included section: `skills/amea-3d/SKILL.md`
 
 # AMEA 3D Production
 
+Use this route only for explicitly requested 3D or an existing 3D project under canonical workflow selection (included section `skills/amea/references/workflow-selection.md`). Depth or camera perspective in a drawn-2D brief does not select this route.
+
 Honor the requested subject and result; characters and organic rigs are optional. Read asset generation (included section `skills/amea/references/asset-generation.md`), 3D asset production (included section `skills/amea/references/3d-production.md`), motion and interaction (included section `skills/amea/references/motion-and-contact.md`), performance (included section `skills/amea/references/performance.md`), review (included section `skills/amea/references/review.md`), and 3D project format (included section `skills/amea/references/3d-format.md`). Read runtime (included section `skills/amea/references/runtime.md`) for local setup and audio (included section `skills/amea/references/audio.md`) for timing.
 
-Reuse the user's established software choice. If absent, ask before production along with any missing 2D/3D preference. Native scene and scripting operations depend on that choice. Blender-specific helpers are optional and do not authorize switching applications.
+Reuse the user's established 3D software choice. If absent and not delegated, ask for that software choice before dependent production. Do not ask again whether the explicitly requested medium is 3D. Native scene and scripting operations depend on the resolved choice; helpers do not authorize switching applications.
 
 Read brief to performance (included section `skills/amea/references/brief-to-performance.md`) and parallel production workers (included section `skills/amea/references/parallel-production.md`). Overlap asset/reference creation with story/action/camera planning and independent setup or sound work. Plan on labeled proxies, then fit final poses, reach, contact and framing to accepted real geometry and rigs. Use separate file ownership and one desktop-input queue.
 
@@ -150,9 +164,9 @@ Prioritize computer-vision review and repair (included section `skills/amea/refe
 
 Choose and record the style, proportions, coordinate basis, scale, materials, construction, and required views. Compare actual neutral renders and representative expressions against stable references. More surface detail cannot repair incorrect structure or silhouette. For original assets, author geometry and rigs; use existing or supplied assets only when consistent with the brief and permissions. Generation model weights are tools, not ready-made scene assets.
 
-Use supplied asset images or create missing references with an available image/drawing tool. Prefer TRELLIS.2 as the first image-to-3D candidate, trying its official hosted workflow before a local install unless the user's constraints favor local processing. Export and inspect the actual GLB. On a concrete access blocker, offer user generation from the prepared images and GLB handoff or a hardware-appropriate local setup. Reuse an established choice. Select another suitable method when context warrants it; do not lock the project to one model.
+Author suitable native geometry and rigs or reuse permitted assets for the selected 3D task. If image-to-3D generation is separately selected, use supplied images or create missing references, then prefer TRELLIS.2 as a candidate when suitable. In that generation route, try the official hosted workflow before local setup unless constraints favor local work, and export/inspect the actual GLB. Generation and its access requirements are not mandatory for native 3D authoring or default drawn 2D.
 
-If the required model or generation route cannot be used, explain the blocker, offer relevant available routes and wait for the user's choice before switching methods or setting up a local model. Reuse an existing choice. A hosted or locally generated GLB does not guarantee good topology, likeness, a rig or correct deformation. Inspect those before animation, and adapt selected local setup to the current user's hardware.
+If an explicitly selected generation method requires an unavailable model or service, explain the blocker and wait for the user's choice before switching that requested method or installing a local stack. Reuse an existing choice. A generated GLB does not guarantee topology, likeness, a rig or correct deformation; inspect those before animation. An unavailable generator does not block a task already using native modeling.
 
 ## Build a performance-ready scene
 
@@ -177,6 +191,8 @@ Included section: `skills/amea/references/2d-assets.md`
 
 # 2D designs, references, and animation assets
 
+Follow canonical workflow selection (included section `skills/amea/references/workflow-selection.md`). The default is agent-authored constructed drawings, entered as editable contours through the selected native tools. Generation, tracing and cutout production are explicit alternatives, not equal candidates to reconsider for each shot.
+
 ## What a 2D model means
 
 Traditional frame-by-frame 2D animation does not require a 3D mesh or a downloadable character-generation neural model. A model sheet is a consistent visual design reference: relevant views, proportions, construction, distinguishing features, expressions, palette and material/line treatment. A layered 2D puppet with deformation controls is optional and belongs to a different animation method. Do not confuse either meaning with the AI model used to generate an image.
@@ -185,13 +201,15 @@ Use the method appropriate to the brief and selected software. Do not run a 3D a
 
 ## Establish artwork that actually matches the brief
 
-Use provided reference images first. Gather relevant references with provenance or create missing references with ChatGPT's available image-generation or drawing tools. Inspect the actual result for silhouette, structure, feature placement, proportions, costume or surface design, palette, style and required views. Keep one accepted design authority instead of independently reinventing the subject in each image.
+Use provided reference images first. Gather relevant references with provenance or author missing construction views with the default drawing method. Use image generation only when selected or authorized for that purpose. Inspect the actual result for silhouette, structure, feature placement, proportions, costume or surface design, palette, style and required views. Keep one accepted design authority instead of independently reinventing the subject in each image.
 
-For detailed illustrative references, use an appropriate drawing or image-generation method. Programmatic primitive shapes can support layout, pose blocking or an intentionally geometric style; they are not an adequate finished substitute for requested detailed anatomy, expressive faces or faithful likeness. More contours or higher resolution cannot repair incorrect design.
+For detailed illustrative work, author the actual contours, facial construction, line hierarchy and shading shapes. Programmatic entry of those authored paths is supported; it must still pass visual inspection. Primitive geometric blockouts alone are not an adequate finished substitute for detailed anatomy, expressive faces or faithful likeness unless the brief requests a geometric style. More contours or higher resolution cannot repair incorrect design.
 
-The native image tool is the preferred image-generation path when available. No particular downloadable 2D model is mandatory. Record the actual tool/model when exposed, and do not claim that a named neural generator produced code-authored drawings. Inspect generated references before proceeding; image generation is not an automatic fidelity guarantee.
+If image generation is explicitly selected for references or an alternative production method, prefer the available native image tool. That preference selects a tool inside the chosen generation task; it does not select generation over authored drawing. No downloadable 2D model is mandatory. Record the actual method and inspect the result; generation is not an automatic fidelity guarantee.
 
 Choose needed views, expression references and construction details from the actual subject and action. Preserve consistency between views. Save accepted references in the project, and revise them deliberately if a design changes. Model sheets do not need to be assembled for subjects that do not benefit from them.
+
+For a changing-pose drawn workflow, use constructed drawn-anime performance (included section `skills/amea/references/drawn-anime.md`) to approve keys across the actual shot views before breakdowns, maintain feature visibility and parent-attached detail, and reuse exact accepted drawings with explicit exposures.
 
 ## Turn references into a performance
 
@@ -289,6 +307,8 @@ Included section: `skills/amea/references/asset-generation.md`
 
 # Asset references, online generation, and user-selected alternatives
 
+Read this only for an asset-generation task selected under canonical workflow selection (included section `skills/amea/references/workflow-selection.md`). These generation and service-fallback instructions do not select the default animation method. Authored drawn 2D creates its own construction references and editable poses without requiring image/video generation or a 3D mesh.
+
 ## Use the right inputs
 
 Use relevant asset images supplied by the user as the design authority. Inspect them before changing or regenerating anything. Reuse accepted references already in the project. If images are missing, create a consistent reference set with an actually available image-generation or drawing tool, using the brief and any supplied visual constraints. Do not make the user supply images the agent can create itself. If that capability is unavailable, explain the specific gap and request the needed input.
@@ -297,7 +317,7 @@ Prepare clean, reusable asset images and preserve their identity, prompts where 
 
 ## Preferred starting point for 3D
 
-Prefer **TRELLIS.2** as the first candidate for image-to-3D assets, especially when a hosted run can provide geometry and PBR materials without a local installation. This is the user's preferred starting point, not a claim that one model wins every task. Let actual reference fidelity, topology/material needs, access, reliability, time, and resource constraints guide the final choice. Test the produced asset rather than judging it only by model reputation.
+For a selected image-to-3D task, prefer **TRELLIS.2** as the first candidate, especially when a hosted run can provide geometry and PBR materials without a local installation. This is a 3D route preference, not a requirement for drawn animation or a claim that one model wins every task. Let actual reference fidelity, topology/material needs, access, reliability, time, and resource constraints guide the final choice. Test the produced asset rather than judging it only by model reputation.
 
 Official discovery links that the agent must know:
 
@@ -364,6 +384,93 @@ Krita may use a single prepared timing mix while the project retains separate st
 
 ---
 
+Included section: `skills/amea/references/blender-2d.md`
+
+# Drawn 2D animation in Blender
+
+Read this when Blender is selected for 2D work. Use drawn anime construction (included section `skills/amea/references/drawn-anime.md`) for the artistic decisions, motion and contact (included section `skills/amea/references/motion-and-contact.md`) for mechanics, and first-delivery acceptance (included section `skills/amea/references/first-delivery.md`) for the requested deliverable. This route creates editable Grease Pencil drawings. A moving 3D camera does not turn a flat cutout into a constructed new view.
+
+## Choose the authoring method deliberately
+
+Use native drawing tools, authored contours, or another available drawing method consistent with the user's constraints. A native contour helper transfers the supplied art; it does not design characters or invent good poses. Programmatic contour entry is not physical stylus drawing. Do not use raster tracing, generated images or generated video where the requested method excludes them. Do not replace detailed illustrative construction with the helper's calibration geometry.
+
+For a new design establish the relevant views, proportions, silhouettes, facial construction, palette and line treatment. Test the most demanding view or deformation before expanding drawings. Keep the complete figure under one accountable pose owner during a coupled action; independent backgrounds, effects and review can proceed in parallel. Workers may prepare separate contributions, but one integrator writes each native document. Read parallel production (included section `skills/amea/references/parallel-production.md`).
+
+Use the actual rendered camera for framing and cloth/limb occlusion tests. A large isolated design sheet can conceal errors that appear at delivery size. For an orbit, establish a projection contract: world/local pose and root travel, constructed relative view, drawing projection, camera framing, then compositing. Apply projection and root transforms once. A drawing already projected into scene XY normally needs an identity actor transform. Keep world-ground contact landmarks separate from lifted foot landmarks.
+
+## Calibrate the native path before scaling
+
+`tools/blender_2d.py` is an optional, dependency-free native transport helper. Run it using Blender's bundled Python. Its calibrated backend is Blender 5.2.2. The selected application may use another version or another native method; do not install or switch software merely to use this helper. On another version, use `--allow-unverified-version` only for an isolated calibration, inspect the results, and retain the report's unverified status until that backend is actually tested. A version flag never certifies compatibility.
+
+Before a long production, exercise the actual intended line widths, curves, compound fills/holes, overlap order, translucency, changing poses, holds, camera and sound packing as applicable. Save and reopen a small native file in a fresh process and render representative frames. Inspect native editability and real pixels. Test the hardest finished-method interval using production art before rendering the rest; a synthetic transport test proves only transport.
+
+The helper writes each pose as an ordered set of separate fill and ink curves in one native drawing per layer. It transfers point/curve attributes in bulk instead of making a native layer for every line. Each path's fill precedes its ink, followed by the next authored path. Compound subpaths retain their shared fill identity. This avoids both excessive native operations and a global “all fills, then all ink” reorder that can break occlusion. `AMEA_CURVE_INDEX.json` embedded in the native file maps curves back to source path IDs. Full native pose drawings remain editable; this is not a bitmap plane or rigged mesh.
+
+For any alternative transport optimization, compare representative renders with an unoptimized reference using the same authored paths. Include overlaps, transparency, the difficult view and support extremes. Exact pixel equality is useful for a change intended to preserve pixels; a deliberate visual change instead requires new visual review. Preserve the source precision and painter order. Avoid huge single-line metadata blocks when writing Blender Text data; embed formatted JSON.
+
+## Authored scene contract
+
+This format is separate from the Krita drawing helper (included section `skills/amea/references/project-format.md`). Save a UTF-8 JSON file inside a production project, outside the AMEA package. It contains:
+
+| Field | Meaning |
+| --- | --- |
+| `schema_version` | `1`. |
+| `canvas` | Integer `width`, `height`, rational `fps` such as `"24"` or `"24000/1001"`. Prefer even dimensions for H.264 export. |
+| `frames` | Positive output-frame count. Output intervals are zero-based and end-exclusive. |
+| `camera` | One fixed sample at frame zero, or one explicit sample per output frame: `frame`, `centre: [x,y]`, positive `width`. This orthographic camera composes already constructed views. |
+| `layers` | Ordered records with unique portable `id`, distinct `z`, `drawings` and `exposures`. Larger Z is closer to the camera. |
+| `background` | Optional opaque `#RRGGBB` world colour; `null` requests transparent output. Partially transparent world colour is rejected. |
+| `audio` | Optional existing project-relative mixed sound file aligned to the full output; starts at native frame 1 and is packed. The audio reader is validated before scene creation; listening remains separate. |
+
+Each layer's `drawings` maps drawing IDs to path lists. A path has unique `id` within that drawing, `d` containing absolute SVG `M`, `L`, `C`, `Q`, `Z` commands, optional `order`, `stroke`, `fill`, `width`, `opacity` and `tolerance`. Coordinates use centred XY, positive X right and Y up. This is an authored geometric path format, not an SVG-file importer. Relative commands, arcs, SVG transforms and arbitrary extra fields are rejected. Flatten those operations deliberately before transfer.
+
+Colours are `#RRGGBB`, `#RRGGBBAA` or `null`; omitted ink is black and omitted fill is absent. Filled subpaths must close explicitly and retain at least three sampled points. Ink width is a nonnegative scalar or `[start,middle,end]` full-width profile. Opacity is in `[0,1]` and multiplies both ink and fill material alpha. Do not rely only on point opacity to make a filled contact shadow translucent. Sampling tolerance defaults to 0.25 drawing units; choose it relative to the closest camera's scale and verify visible curves.
+
+Layer `exposures` are ordered `{start,end,drawing}` records covering exactly `[0,frames)` without gaps or overlap. `drawing` names a drawing ID or is `null` for an explicit blank. Native frame is output frame plus one. The compiler inserts an additional blank key at native `frames+1` to terminate the hold. Consecutive identical drawings can share an exposure; nonconsecutive reuse does not imply a newly authored pose. Record approved-key identity in project evidence and verify exact reuse when expanding breakdowns.
+
+A minimal **transport calibration**, not a character design:
+
+```json
+{
+  "schema_version": 1,
+  "canvas": {"width": 640, "height": 360, "fps": "24"},
+  "frames": 2,
+  "camera": [{"frame": 0, "centre": [0, 0], "width": 640}],
+  "background": null,
+  "layers": [{
+    "id": "calibration", "z": 0,
+    "drawings": {"sample": [{
+      "id": "contour", "d": "M -40 -30 Q 0 50 40 -30 Z",
+      "stroke": "#243342", "fill": "#8fb7ca80", "width": [1, 3, 1]
+    }]},
+    "exposures": [{"start": 0, "end": 2, "drawing": "sample"}]
+  }]
+}
+```
+
+## Compile, render and resume
+
+Use the selected Blender executable; these commands assume it is on PATH:
+
+```bash
+blender --background --python-exit-code 1 --python tools/blender_2d.py -- project/scene.json --output project/film.blend
+```
+
+The compiler validates paths, timing, camera and audio before replacing its fresh working scene. It checks the selected backend's actual RNA hard limits, including resolution, rational frame-rate representation and the terminating blank frame, so unsupported settings fail instead of silently clamping. Run it in a dedicated background process, not against an unsaved user document. It refuses existing native outputs and writes a temporary native file before publishing the new one. Keep earlier revisions. The adjacent `.transport.json` records source/backend/native identities and actual native keys. It marks artistic and playback review pending; successful compilation is not an animation-quality pass.
+
+Use the saved native for local and full renders rather than recompiling it for each range. `tools/render_queue.py` renders stable, already-authored Blender scenes with versioned caches and optional encoding. Its job `start` and `end` are **inclusive native frames**; for this helper's complete output use `start: 1`, `end: frames`. Declare external dependencies even when the native file is unchanged. Supply `audio_mix` for the encoded soundtrack; a packed sequencer sound is not automatically an FFmpeg input. Read 3D format (included section `skills/amea/references/3d-format.md`) only for the queue's software-independent render-job fields; do not fabricate rig or mesh records for drawn work.
+
+Hold source/native inputs stable while workers render. Wait for the actual compile/save process to finish before dependent reopen or render jobs. A returned asynchronous job ID means it is still running. Match cached frames to native/source/backend/settings identities and their own content hashes; dimensions alone cannot identify a current frame. Reopen and compare sampled renders. After local repair, review its consecutive affected interval and boundaries before full expansion. Preserve unaffected approved assets; do not reset the gate's retry history by renaming the same failure.
+
+## Delivery checks
+
+Check the complete frame sequence, exact duration/rational FPS, one-frame indexing boundaries, native drawing exposures, curve editability and linked/packed assets. Inspect consecutive final-camera renders for body participation, face/ear/hair visibility, garment coverage, contact, secondary motion, parallax and fill edges. Use enlarged diagnostic strips where small overview cells hide the defect. Review the actual encoded output as well as native renders, including playback and listening when the tools support them. Full decoding and pixel comparisons are mechanical checks and cannot stand in for those observations.
+
+Record which artifacts, ranges and revision hashes were actually inspected and the method used. A still-image pass must not be relabelled playback or sound audition. A reviewer from the same model family is not a cross-family or human review. Name remaining capability gaps precisely and deliver the actual requested stage without claiming professional quality from a passing helper. Return the playable output, editable native project, necessary assets and concise evidence; do not ship personal logs or private production materials in AMEA itself.
+
+
+---
+
 Included section: `skills/amea/references/brief-to-performance.md`
 
 # From brief to visible performance
@@ -399,6 +506,8 @@ Store the following information in the authoritative shot record at the detail n
 
 Camera movement should reveal or support the relevant performance, maintain useful spatial relationships and fit the desired rhythm. A deliberate locked camera is valid. Moving cameras need coherent paths and timing, with framing checked across the shot rather than only at keys. Avoid arbitrary cuts or orbiting that obscure causality, compress important actions out of view or disguise limited movement.
 
+Name what each camera beat reveals. A rear shoulder can establish geography or anticipation, but if it hides the hand, torso response and support at the decisive beat, revise the staging. Judge near/far scale, visible upper or lower planes and useful negative space in the actual drawing; a front/rear camera label and correct painter order alone do not establish depth. For energetic action, read the compression, loaded support, pelvis/ribcage opposition, release, travel and recovery in the changing whole-body silhouette before effects are added.
+
 Story/action and camera workers can plan while assets are built, using labeled proxies and a shared coordinate/timing contract. Fit the plan to actual accepted proportions, reach, deformation limits, materials and controls before committing dependent animation. Read parallel production (included section `skills/amea/references/parallel-production.md`) for ownership and handoffs, and motion and contact (included section `skills/amea/references/motion-and-contact.md`) for mechanics.
 
 ## Prove the performance before finishing
@@ -420,15 +529,70 @@ Included section: `skills/amea/references/chatgpt-execution.md`
 
 AMEA is intended for a ChatGPT session that can inspect images and operate the user's selected software through actual authorized computer-control and workspace tools. Verify current capabilities: viewing the application, interacting with it, reading/saving project files, and rendering or exporting. A text-only session or an installed application is not proof that those controls exist.
 
+Verify the capabilities needed by the selected route. A supported headless native API/CLI plus file and image inspection can author, save, reopen and render editable work without desktop input. Interactive editing and application playback need their own real controls. Use desktop input only for the relevant operations; opening an editor and leaving it idle does not advance production. Read Blender 2D execution (included section `skills/amea/references/blender-2d.md`) when that route is selected.
+
 Use the current environment's supported computer-use instructions and APIs. Observe real application state, use verified controls, and respect stop signals. Do not invent screenshots, replay coordinates across changed layouts, or substitute an unsupported desktop-control method. Use the application's native scripting/CLI for suitable repeated operations and computer control for observation and edits that need it. Avoid slow file-dialog loops when a verified native API can perform the operation.
 
-Use ChatGPT's actually available image-generation/editing tool for suitable reference and artwork tasks, following its current tool instructions. Supply actual relevant design and pose references. Record the tool and exposed model identifier when available; do not invent a model name when the interface does not expose one. Image-generation access, paid API credits, and speech synthesis are separate capabilities.
+Use canonical workflow selection (included section `skills/amea/references/workflow-selection.md`) to choose the authoring method. For default drawn 2D, author editable contours and construction references with native tools; no image generator is needed. When image generation/editing is explicitly selected, use an actually available tool, supply relevant references, and follow its tool instructions. Record its actual provenance without inventing a model identifier. Generation access, paid credits and speech synthesis are separate capabilities, not prerequisites for every animation task.
 
 Save accepted assets inside the project and maintain useful native structure. Use the user's chosen software and previously established medium/software preferences. If controls or required generation capabilities are missing, preserve completed work, identify the specific gap, and offer a practical handoff or supported route. Do not claim application execution that did not occur or silently switch the production method.
 
 Use actual host worker tools for parallel production (included section `skills/amea/references/parallel-production.md`) when available and permitted. Overlap independent planning/review with generation and bounded processing. Keep one desktop-input owner and one writer per native document. Do not invent background agents or create unrelated conversations as a replacement for task-local workers.
 
 For animation quality, prioritize computer-vision inspection of the actual rendered result and application playback. Tool execution and mathematical checks support that visual assessment; they do not replace it. Preserve actual observations, reviewed ranges, detected issues, corrections and visual retests.
+
+
+---
+
+Included section: `skills/amea/references/drawn-anime.md`
+
+# Constructed drawn-anime performance
+
+Use this reference for editable 2D animation with changing drawings, especially turns, full-body action, layered costume or surface detail, and moving viewpoints. It supplements production (included section `skills/amea/references/production.md`), motion and contact (included section `skills/amea/references/motion-and-contact.md`), and visual repair (included section `skills/amea/references/visual-review-and-repair.md`). Adapt it to the selected drawing application; Blender 2D execution (included section `skills/amea/references/blender-2d.md`) covers that application when selected. Subject, clothing, anatomy, camera movement, shot count and duration come from the brief.
+
+## Prove the keys across the actual views
+
+Establish the intended style with actual drawings, not an adjective or a count of contours. Keep construction, shape design, performance and technical integrity as separate judgments. A coherent skull can still have an unappealing silhouette; a recognizable design can still move weakly; a correct export approves neither. For a detailed anime target, compare the head at useful face size and the whole figure at delivery size. Decide the head-to-body proportion, curved-to-straight contour rhythm, eye/lid simplification, outer-versus-interior ink hierarchy and grouped cel-shadow treatment from a consistent visual authority. Do not turn one past character's proportions or costume into a universal template.
+
+Before breakdowns, establish the design in every materially different view the action uses. Build the keys at delivery framing: the beginning and ending states, pose extremes, changes of support, and the hardest turn or occlusion. A front model sheet does not approve a profile, rear view, foreshortened pose or tilted head. Compare those keys together for identity, volume, proportions, silhouette and visible feature placement. Resolve a wrong construction here before multiplying it into intermediate drawings.
+
+For a head, when applicable, establish the cranial mass, jaw or muzzle, face centerline and brow, eye, nose and mouth planes. Locate features on those turning forms rather than sliding a front face across a fixed outline. Track the near and far sides separately: their widths, overlap and visibility change with view. Decide when the far eye, ear, cheek, hairline or marking disappears behind another form and how it returns. Use simple construction guides underneath the final style; stylization can simplify the visible result while preserving a coherent turn.
+
+A profile must preserve the same forehead, nose-to-mouth-to-chin relationship and cranial depth as the other views. A rear quarter needs a continuous skull/ear/cheek/jaw connection; placing a narrow profile fragment beside rear hair is not a constructed turn. When elevation matters, author its newly visible planes: crown and compressed facial spacing from above; nose underside, jaw underside, ear level and collar opening from below. Extra yaw samples or an affine shear do not prove those elevation views. Track anatomical-left/right details and hair roots through opposite views; mirroring the complete artwork can reverse the design.
+
+Approve a key as a specific native drawing revision, not a description of a pose. Reuse that exact accepted artwork at its assigned exposure instead of redrawing an approximation during assembly. Record drawing identity, output start and end frames, hold length, and any intentional reuse in the timing sheet. A reused key contributes exposure frames but no new drawings. If construction changes, revise its dependent breakdowns and invalidate affected reviews deliberately.
+
+## Build transitions from volumes and force
+
+Breakdowns explain how one accepted key becomes the next: the path and spacing of masses, changing perspective, overlap, and visibility events. For whole-body action, coordinate root travel, weight transfer, pelvis or equivalent central mass, torso, shoulders, head and extremities. Redraw the changing silhouette and foreshortening where needed. Rotating isolated limb cutouts against an unchanged torso rarely explains a turn, weight shift or forceful action.
+
+Match the requested energy. Quiet acting may use a held body, small balance changes, gaze, breath and restrained secondary motion. Vigorous action needs the preparation, compression, extension, counterbalance and recovery that make its force readable. Neither mode calls for arbitrary extra motion. Check the whole pose before adding detail; a moving hand cannot repair an unsupported body.
+
+Design the enclosing gesture before interior anatomy or costume detail. Shoulder-to-hand continuity, elbow compression, forearm taper, palm volume and finger grouping matter more than additional muscle or fold lines. Preserve palm/finger proportion when adjusting arm length; stretching the complete arm can accidentally elongate the hand. Author palmar, side and dorsal hand views deliberately. Under clothing, locate hip, knee, calf and ankle before drawing folds, so trousers do not become parallel columns. Use a shot-specific redraw when a reusable neutral contour cannot support the foreshortening or expression.
+
+For attached details, establish the parent form through a difficult bridge first. Transport eyes, brows, hair roots, seams, markings or accessories with that parent's local construction, orientation and scale, then author their own expression or lag. Do not interpolate their screen positions independently between distant keys while the head or body changes view. In separate layers or procedural drawings, retain a clear parent/local coordinate relationship; in hand drawing, use the same landmarks and wrap guides. Inspect where a feature crosses the silhouette or changes occlusion to prevent a one-frame jump or detached detail.
+
+## Define ground and coverage once
+
+Declare the scene's ground plane, root position and orientation, and the mapping into the camera. Keep world travel separate from pose-local offsets. Apply the root transform and camera projection once; do not bake projected root movement into a drawing and add it again at assembly. In a screen-space workflow, use explicit perspective-ground guides and the same ownership rule.
+
+Store a planted contact on the ground or contacted moving surface for its full exposure interval. Derive the pose around that contact until lift or release; an offset local to a rotating root is not a fixed planted point. Review the projected sole or contact patch, support transfer and landing, not only a joint marker. Contact shadows follow the same surface and placement contract. Link this record to the existing contact plan (included section `skills/amea/references/motion-and-contact.md`) rather than creating a competing root trajectory.
+
+When garments or overlapping coverings exist, construct their wrap around the underlying moving volume. Include side and rear coverage, underlap at joints, openings, hems and the hidden surfaces revealed by turns or wind. Check the silhouette and fill coverage at extremes and between keys: no accidental gaps, exposed construction or disconnected panels. Give folds and hems a reason to change through tension, compression, gravity or airflow. Preserve an intended opening or stylized deformation rather than automatically closing every gap.
+
+## Coordinate wind and camera depth
+
+Treat wind as a timed scene influence with direction, gust onset, strength changes and settling. Coordinate available environmental cues with hair, loose fabric and other responsive forms. Anchors remain attached; response propagates along a strand or panel with appropriate lag and recovery. Vary resistance and delay rather than giving every element the same sine wave. Stillness and shelter are valid when staged intentionally. Review gusts against body movement so secondary action supports the performance.
+
+A camera move that reveals depth requires corresponding constructed view changes: near/far proportions, visible planes, occlusion order, foreshortening and background parallax. Plan these in the keys before refining the camera. Scaling, shearing or panning a flat drawing can serve a deliberate limited-animation shot, but it does not establish a newly revealed view. Test the final camera together with the drawings; an alternate diagnostic view cannot approve the audience's view.
+
+## Gate the hardest native interval before expansion
+
+Select a short consecutive interval containing the hardest required construction, support change, occlusion or view transition, with enough lead-in and recovery to assess it. Include a quiet bridge if it presents a different risk. Use the intended native layers, drawings and exposure timing, then render or preview through the actual production route at the requested stage. For final work, prove the finish as required by first-delivery acceptance (included section `skills/amea/references/first-delivery.md`). A contact sheet of isolated good keys is insufficient.
+
+Inspect playback at intended speed and every consecutive drawing in that interval against the accepted keys. Check construction, parent-attached detail, contact, garment coverage where relevant, and camera readability. Reopen or inspect the native sequence to confirm that the delivered edits are real and useful. Record the tested interval, input revision, observations and outcome.
+
+Bound each gate to one initial test and up to three targeted local repair-and-retest attempts. Preserve accepted keys and unaffected work. Choose each repair from the observed cause; do not rerender the entire production or repeatedly tune unrelated parameters. Changing a filename, resolution or gate label does not reset the attempt count. If it still fails, stop expanding that route, retain the unresolved evidence, and record a materially different supported remedy or a precise capability gap. Follow the existing route-choice rules when an essential user constraint must change. Do not claim completion or hide the failed interval. These gates require no particular model family, paid service or token budget.
 
 
 ---
@@ -466,7 +630,7 @@ Preserve the original request, subsequent corrections and supplied references in
 
 For each material requirement record what would demonstrate success and where it will be checked in the actual artifact. Link it to shots/assets or output intervals. Keep one record with the existing brief/shot plan rather than creating competing specifications. Before delivery, compare that record against the original request again; a perfectly checked list can still omit a requested feature.
 
-Reuse established preferences and reference authority. Infer reversible creative choices and routine production decisions. Ask one concise, bundled question only for missing essential choices or an actual access/scope decision. If the user delegates medium/software selection, choose suitably and proceed. An internal quality gate is not a request for repeated user approval.
+Resolve the route through canonical workflow selection (included section `skills/amea/references/workflow-selection.md`), reusing explicit/inherited preferences or its documented authored-2D/Blender default. Preserve reference authority and infer reversible creative choices. Ask one concise question only for an essential decision that the resolved contract does not cover or an actual access/scope change. An internal quality gate is not a request for repeated user approval.
 
 ## Demonstrate the actual production route early
 
@@ -606,7 +770,7 @@ The coordinating agent owns the brief, decisions, dependency graph, integration 
 
 ## Start ready work together
 
-Read brief to performance (included section `skills/amea/references/brief-to-performance.md`) before assigning creative work. Establish missing medium/software choices before production; independent media inspection and planning may continue while an essential answer is pending. Once the brief and choices are usable, open the relevant independent lanes before waiting for asset generation to finish.
+Read brief to performance (included section `skills/amea/references/brief-to-performance.md`) and resolve canonical workflow selection (included section `skills/amea/references/workflow-selection.md`) before assigning creative work. Workers inherit that single method/editor contract, including its defaults; they do not reopen method selection independently. Continue useful media inspection and planning while a genuine essential answer is pending. Start ready independent lanes without waiting for unrelated asset preparation to finish.
 
 | Workstream | Work that can start early | Dependency before final acceptance |
 | --- | --- | --- |
@@ -663,6 +827,8 @@ Inspect installed capabilities once, then reuse verified tools and accepted asse
 
 Use inexpensive but representative tests before finishing. Judge design, articulation, interaction, and framing with consecutive frames and actual playback. Reduced resolution is useful only if it preserves the evidence needed to assess the defect. Correct rough mechanics before spending time on detailed textures, lighting, or full-length rendering.
 
+For constructed drawing work use drawn anime (included section `skills/amea/references/drawn-anime.md`); for Blender-selected 2D use native drawing transport (included section `skills/amea/references/blender-2d.md`). Benchmark compile/save, scene reopening and rendering separately. Batch native attribute writes, preserve ordered fill/ink curves, and prove any proposed lossless optimization with actual reference pixels before scaling. Compile the stable native once, then reuse it for test ranges and the full render. More detailed art should not imply one native layer or API transfer for each line.
+
 Separate design, geometry, rigs, performance, scene assembly, sound, and delivery caches. Changing movement should not regenerate a sculpt; changing one contact should not rebuild every background. Preserve full native assets while using reviewed proxies or LODs. Record completed artifacts, their input identities, unresolved corrections, and the next action so another agent can resume.
 
 ## Production workers and bounded compute
@@ -679,6 +845,8 @@ Choose samples, resolution, motion blur, effects, and LOD deliberately and revie
 
 Include the native scene, required external assets, relevant scripts, settings, and tool version in render identity. An existing PNG or old completion flag does not establish that a frame matches current inputs. Separate output generations by identity and preserve earlier revisions.
 
+Validate each cached frame against its own saved content hash as well as its dimensions/decodability and the generation's input identity. An edited, valid PNG can have the expected size and still be stale. The Blender queue stores per-frame hash sidecars, rejects inputs changed during rendering, and decodes the complete encoded movie before reporting mechanical export success. It leaves visual and listening acceptance pending.
+
 Pack native assets or declare all external dependencies. The optional Blender queue hashes declared inputs, assigns disjoint ranges, writes PNG frames atomically, and resumes validated frames from the same generation. Undeclared external changes can still invalidate a cache; the agent must maintain that contract.
 
 Correct native source first and invalidate all causally affected work. Render a local replacement only after earlier writers for that range have stopped. Record replaced intervals and their inputs. Never run competing writers for the same frames or encode while corrections are pending. Validate the entire sequence before encoding, then decode and review the actual final output.
@@ -691,6 +859,8 @@ Included section: `skills/amea/references/production.md`
 # Animation production
 
 For 2D designs use 2D assets (included section `skills/amea/references/2d-assets.md`). Use computer-vision review and repair (included section `skills/amea/references/visual-review-and-repair.md`) throughout rough and finish: inspect actual changing drawings and motion, repair observed defects, and visually retest instead of accepting code measurements as proof of quality.
+
+For changing-pose drawn anime, use constructed drawn-anime performance (included section `skills/amea/references/drawn-anime.md`) for multi-view keys, attached details, ground projection, coverage, coordinated secondary motion, and a bounded native interval gate before expansion.
 
 ## Interpret and establish references
 
@@ -716,7 +886,7 @@ Track volumes, landmarks, contact points, silhouettes, arcs, visibility, and dep
 
 Keep rough construction and key poses editable. While drawing, inspect both neighboring drawings and the relevant bounding key poses with onion skins. Compare against the canonical design as well; a chain of small local errors can drift far from the design. Use separate views or reference images for large perspective changes instead of forcing a 2D overlay to resolve unseen geometry.
 
-For external generation, provide the actual design images, relevant pose references, framing, surrounding drawings, and intended movement through a verified reference-capable tool. Generate and inspect in manageable dependent batches. Register provenance. A sequence of unrelated image prompts does not establish temporal conditioning. A finished video-generation result does not prove that editable intermediate drawings exist.
+Only when an external generation method is explicitly selected, provide the actual design images, relevant pose references, framing, surrounding drawings, and intended movement through a verified reference-capable tool. Generate and inspect in manageable dependent batches and register provenance. This is not the default authored-contour route. Unrelated image prompts do not establish temporal conditioning; generated video does not prove editable intermediate drawings exist.
 
 Prepare a pencil test with the real exposure timing. Watch it at intended speed and inspect drawings individually. Check whether the action reads, weight and contact make sense, the silhouette changes intentionally, and forms retain their identity. Inspect overlaps, occlusions, timing, camera motion and shot transitions. Correct rough animation and retest the affected interval before applying expensive finish. Revisit earlier stages if playback exposes a planning error.
 
@@ -791,7 +961,7 @@ Included section: `skills/amea/references/review.md`
 
 Use computer-vision review and repair (included section `skills/amea/references/visual-review-and-repair.md`) as the primary animation-quality gate. Inspect actual playback and consecutive rendered frames, correct observed defects in native work, and visually retest the affected sequence. Code measurements support that process; they cannot close a visible issue by themselves.
 
-Apply these checks to the selected medium and software. Drawing references below apply to drawing workflows; scene production additionally uses the 3D checks below. Do not fabricate a native file or validator pass for an application that was not used.
+Apply these checks to the resolved canonical workflow (included section `skills/amea/references/workflow-selection.md`). Drawing checks apply to drawn work; the additional mesh/rig checks apply only to selected rendered 3D, not to a Blender scene containing Grease Pencil drawings. Do not fabricate a native file or validator pass for an application that was not used.
 
 Review the actual artifacts at each requested stage. Automated checks can find corrupt images, missing files, repeated pixel content, timeline gaps, stale records, and absent deliverables. They cannot establish good drawing, appropriate performance, convincing motion, or faithful understanding.
 
@@ -818,9 +988,9 @@ Reopen native documents in the selected software and verify useful editing struc
 
 ## Evidence and honesty
 
-Keep per-shot review records bound to current drawings, timing, native files, and relevant project inputs using the helper's fingerprint command. Recompute and review after modifying those inputs. Final reviews also bind the final output and registered audio assets. Exporting references or calculating fingerprints does not count as reviewing them.
+Keep review records bound to current drawings, timing, native files and relevant inputs, including output/audio for final review. Use the cross-software `tools/delivery_gate.py` fingerprint command or equivalent revision-bound native evidence. The Krita helper's per-shot fingerprint format applies only to selected Krita work. Recompute and perform the affected review after changes; exporting references or calculating hashes does not count as reviewing them.
 
-The validator's `structural_passed` reports only mechanical integrity. `recorded_reviews_current` reports whether pass records with observations exist for the current fingerprints. Neither result certifies truthful observations or artistic quality. A set of transformed stills can still defeat structural checks; reject it through actual comparison with the requested motion plan.
+For the Krita-only helper, `structural_passed` means mechanical integrity and `recorded_reviews_current` means current pass records exist. Cross-software acceptance instead uses its own `recorded_acceptance_current` result; Blender transport reports native compilation only. None certifies truthful observations or artistic quality. Do not require an unrelated helper's fields to approve a different application. Reject transformed stills that fail the requested performance through actual visual comparison, even if structural checks pass.
 
 If quality is insufficient, revise the affected drawings and dependencies. If a required capability is missing, deliver a truthful checkpoint with the remaining work identified. Do not label planning, generated stills, source re-encoding, or unreviewed roughs as a completed drawn animation.
 
@@ -843,9 +1013,11 @@ Included section: `skills/amea/references/runtime.md`
 
 AMEA contains authored skills, references and helpers. It does not ship Python, libraries, editors, downloaded generator source or model weights. `requirements.txt` is the single dependency file: its installable baseline supports image helpers, and comments identify optional backend dependencies and official setup links. Install only what the chosen workflow needs.
 
-Establish missing medium/software preferences before production and reuse earlier choices. Discover the selected editor and its supported controls. Run `python tools/dependency_doctor.py` with available Python to inspect helper dependencies and optional tools; this report does not prove GUI access or animation capability.
+Resolve medium/software/method through canonical workflow selection (included section `skills/amea/references/workflow-selection.md`), using its authored-2D/Blender default where no explicit or inherited choice exists. Discover that editor and its supported controls. Run `python tools/dependency_doctor.py` with available Python to inspect helper dependencies and optional tools; this report does not prove GUI access or animation capability.
 
 ## Generation access and user choice
+
+This section applies only after a generation method is selected. Default authored 2D needs no image/video generator, model download, hosted account or generator-choice question. Missing access to such services is not a blocker for that route.
 
 Prefer suitable hosted TRELLIS.2 for new 3D assets; read asset generation (included section `skills/amea/references/asset-generation.md`) before setup. Use supplied images or create missing references with available tools. A hosted GLB export needs no local inference framework or checkpoint.
 
@@ -865,6 +1037,8 @@ Before scaling, demonstrate the production route appropriate to the requested st
 
 `amea_project.py` manages the optional Krita drawing evidence/timing contract; it does not draw or control the UI. Blender rendering and audit helpers run through the selected Blender executable. For another editor use its supported native tools and equivalent evidence. Helpers do not certify artistic quality, source fidelity, contact or subjective audio review.
 
+For Blender-selected 2D, `tools/blender_2d.py` transports authored contours, painter order and exposures into editable Grease Pencil drawings; read Blender 2D execution (included section `skills/amea/references/blender-2d.md`) for its version calibration and source contract. It uses Blender's bundled Python without an additional inference stack. It supplies neither character design nor a performance generator. Keep project-specific art, recordings, reviews and source manifests outside the AMEA package. The render queue consumes a stable saved native file; compilation and rendering are separate operations.
+
 
 ---
 
@@ -872,13 +1046,13 @@ Included section: `skills/amea/references/software-selection.md`
 
 # Medium and software preferences
 
-Before creating production assets, establish the user's 2D/3D preference and the software to use. Reuse choices already supplied in the request, conversation, or project. Ask for any missing choices together in one concise question. Do not make the user answer again on every shot or continuation. A specific preference overrides an inference from attached media; supplying a video does not decide the workflow by itself.
+Use canonical workflow selection (included section `skills/amea/references/workflow-selection.md`) before creating production assets. Reuse explicit user choices and an existing project's medium/software. For a new unspecified anime request, the documented default is authored drawn 2D in Blender Grease Pencil: state and record it, then proceed without asking the user to choose again. A specific user preference overrides the default and an inference from attached media; supplying a video does not decide the workflow by itself.
 
-If the user explicitly delegates a choice, select an appropriate available tool and record it. Do not silently treat an unspecified preference as delegation. While a necessary preference is pending, inspect supplied material, inventory tools, and preserve the brief; postpone dependent production decisions.
+Ask only for a genuine unresolved choice not covered by the default or inherited contract, such as software for explicitly requested 3D or incompatible requirements. If the user delegates such a choice, select a suitable available tool and record it. While an essential answer is pending, inspect supplied material and continue independent planning; do not replace the requested method with an unrelated available backend.
 
 Save `preferences.medium`, `preferences.software`, and relevant version/tool paths in the project. Verify actual native file support, scripting or UI control, drawing or rigging capabilities, rendering, audio support, and export. Tool installation is not proof that the current AI host can operate it. Use the host's supported interface and respect the chosen production method.
 
-Krita drawing and Blender scene helpers are optional implementations supplied with AMEA. Other software can be used through its supported native tools, scripts, or host controls. Adapt the workflow and editable deliverable to that software; do not generate a fake native document for an unsupported application or silently switch applications.
+Blender Grease Pencil is the default drawn-2D implementation; the contour helper is an optional transport optimization within that method. Krita execution and the Krita-only helper apply when Krita is explicitly selected or inherited. Other requested software uses its supported native tools. Preserve the canonical construction/review discipline and useful editability; do not fabricate a native document or silently switch applications.
 
 Reuse installed dependencies first. Install missing libraries into an isolated project environment when needed for the selected workflow. Do not install a whole editor, tensor framework, model checkpoint, or unrelated backend for a task that does not need it. Missing access, platform incompatibility, or a required paid service needs a precise explanation and an appropriate alternative or user decision.
 
@@ -943,8 +1117,55 @@ If consecutive retests reproduce substantially the same failure, stop full expor
 
 ## Preserve truthful review records
 
+Choose each new test to settle a concrete production decision. Inspect existing pixels first; reuse sufficient evidence instead of rerunning passed software checks. For a weak drawing, a large affected view and its neighboring construction may be decisive. For a weak launch or turn, use the real consecutive interval and intended timing. More reports, a broad mechanical suite or repeated full exports do not improve artistic evidence. Preserve the specific failed observation and make a cause-led local correction.
+
+Bind contact sheets and extracted review frames to their actual source revision. After a repair, retain old evidence as clearly historical or regenerate only the affected sheet; do not let a stale thumbnail appear to show the current success or failure.
+
 Record the actual visual tool/method, input or output identities, inspected frame ranges, reference images, observations, evidence crops where useful, issue state, correction and retest. A resolved issue needs observations of the new output. Do not copy old review results onto changed frames or let helpers create perceptual pass records automatically.
 
 A review worker may inspect stable exports while another worker produces independent material. Follow parallel production (included section `skills/amea/references/parallel-production.md`): read-only review inputs, exact artifact revisions, coordinator reconciliation and invalidation after changes. Inspect transitions between independently produced intervals as well as their interiors. Worker confidence or a completion summary is not a substitute for observing the result.
 
 Successful encoding and finite bone transforms are separate mechanical evidence. Actual listening is still needed when judging sound. If only sampled frames were inspected, say so; do not claim full playback, complete coverage or subjective audio review.
+
+
+---
+
+Included section: `skills/amea/references/workflow-selection.md`
+
+# Canonical workflow selection
+
+This is the routing authority within AMEA. Apply the user's explicit requirements and preserve existing work first. Then use this policy to select one production route. Other references explain parts of that route; they are not competing defaults.
+
+## Default: constructed, authored 2D drawings
+
+For a new request to make anime without a specified medium, select **drawn 2D**. If no software is specified or inherited from the project, select **Blender Grease Pencil**. State these working choices briefly and proceed; do not require a preference questionnaire to activate the default.
+
+The default authoring method is agent-authored editable contours, using construction guides and changing whole poses, transferred through the native API. Programmatic path entry is allowed unless the user excludes it. It is not physical stylus drawing, raster tracing, a generated image sequence or a rendered 3D character. An API helper transfers the art; the agent remains responsible for construction, posing, expression and visual repair.
+
+Use drawn anime construction (included section `skills/amea/references/drawn-anime.md`) as the 2D performance authority and Blender 2D execution (included section `skills/amea/references/blender-2d.md`) for that default implementation. The production order is: brief and design authority → relevant-view keys → reviewed keys → breakdowns and inbetweens → consecutive native finished-method test → targeted repair and retest → remaining production → final output/native review and delivery. Use this same construction and review discipline for new drawn movement in creation, reconstruction and editing.
+
+## Selection boundaries
+
+| Request or project context | Selected route |
+| --- | --- |
+| New anime request, no medium/editor | Drawn 2D, Blender Grease Pencil, authored contours. |
+| “2D anime that looks 3D,” depth, changing camera perspective | Drawn 2D with constructed views, foreshortening and parallax. Camera wording alone does not select rendered 3D. |
+| Explicit other 2D editor | Same drawn construction/performance workflow through that editor's supported native tools. Read its execution guide only when selected. |
+| Explicit 3D animation | Separate 3D route (included section `skills/amea-3d/SKILL.md`). Reuse the chosen software; ask for it only if still essential and unspecified. |
+| Edit or continue existing native work | Preserve its medium, software, accepted assets and unaffected performance unless conversion is requested. Apply current construction/review to new drawn movement. |
+| Supplied raster artwork or source video | Inspect its role and preserve permitted useful material. An attachment does not select generated-frame production, tracing, a cutout rig or a different medium. |
+| Explicit generation, cutout/rigged 2D, tracing, or direct canvas-only method | Follow that specific method within available capabilities and authorization; state its actual production method. It is an explicit alternative, never an automatic fallback. |
+
+Image generation, video generation, 3D asset generation and tracing are **not prerequisites or fallback engines for the default 2D route**. Supplied reference images may guide design. Create missing construction references with the authored drawing workflow by default. Invoke another generation method only when the user selects it or explicitly authorizes it as an alternative. A missing generator, account, model or paid service must not block an otherwise available authored 2D route.
+
+Likewise, do not switch from authored contours to slow simulated freehand input, force a Krita-only evidence format onto Grease Pencil, or render a 3D character just because another reference describes those tools. Respect an explicit drawing restriction; if the host cannot perform it, name that capability gap instead of mislabelling a different method.
+
+## One contract for the active production
+
+Record `workflow_id: drawn-2d`, medium, software, authoring method, reference authority and output clock in the project brief for the default route. For another selected route record its actual method. Record whether a choice came from the user, the existing project or the documented default. Workers and later sessions inherit that contract; they do not independently choose a backend. A method change is deliberate, scoped and subject to the user's constraints.
+
+Within the package, resolve 2D routing questions with this file, construction/performance questions with `drawn-anime.md`, and Blender transport questions with `blender-2d.md`. General production, runtime, asset and review references supplement those choices. Their conditional instructions apply only after the relevant method has been selected. The Krita helper format and 3D asset-generation instructions do not override this default.
+
+`CHATGPT-AMEA.md` is generated from the current skill sources by `tools/build_package.py`; it is the same workflow in consolidated form, not a second version to choose. Distribute and load files from one current bundle. Do not combine a stale copied prompt with current skills or hand-edit the generated file as a separate policy. Rebuild it and the archive after source instruction changes.
+
+The default provides a repeatable production method, not a guarantee of artistic taste or skill. A successful native compile, many drawings or a passed mechanical check cannot replace the actual visual and motion gates. Preserve unresolved defects and report the real deliverable stage if the intended result cannot be completed.

@@ -6,7 +6,7 @@ The coordinating agent owns the brief, decisions, dependency graph, integration 
 
 ## Start ready work together
 
-Read [brief to performance](brief-to-performance.md) before assigning creative work. Establish missing medium/software choices before production; independent media inspection and planning may continue while an essential answer is pending. Once the brief and choices are usable, open the relevant independent lanes before waiting for asset generation to finish.
+Read [brief to performance](brief-to-performance.md) and resolve [canonical workflow selection](workflow-selection.md) before assigning creative work. Workers inherit that single method/editor contract, including its defaults; they do not reopen method selection independently. Continue useful media inspection and planning while a genuine essential answer is pending. Start ready independent lanes without waiting for unrelated asset preparation to finish.
 
 | Workstream | Work that can start early | Dependency before final acceptance |
 | --- | --- | --- |

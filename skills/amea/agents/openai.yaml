@@ -1,4 +1,4 @@
 interface:
   display_name: "AMEA"
   short_description: "Create, recreate, and edit anime animation"
-  default_prompt: "Use $amea to carry out my animation request in Krita."
+  default_prompt: "Use $amea to complete my anime request, defaulting to authored drawn 2D in Blender only when my request and existing project leave the method unspecified."
