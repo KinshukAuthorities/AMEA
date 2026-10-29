@@ -6,7 +6,7 @@ Follow [canonical workflow selection](workflow-selection.md). The default is age
 
 Traditional frame-by-frame 2D animation does not require a 3D mesh or a downloadable character-generation neural model. A model sheet is a consistent visual design reference: relevant views, proportions, construction, distinguishing features, expressions, palette and material/line treatment. A layered 2D puppet with deformation controls is optional and belongs to a different animation method. Do not confuse either meaning with the AI model used to generate an image.
 
-Use the method appropriate to the brief and selected software. Do not run a 3D asset generator for ordinary 2D drawing merely because it is available. Do not force a cutout rig onto a request for changing-pose drawn animation. A 3D reference or rig can assist a hybrid workflow when appropriate and accurately disclosed.
+Use the method appropriate to the brief and selected software. Do not run a 3D asset generator for ordinary 2D drawing merely because it is available. Do not force a cutout rig onto a request for changing-pose drawn animation.
 
 ## Establish artwork that actually matches the brief
 

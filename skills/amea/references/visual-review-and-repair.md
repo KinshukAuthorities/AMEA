@@ -12,7 +12,7 @@ Use canonical design references alongside neighboring frames. Inspect silhouette
 
 Trace each relevant form through adjacent frames and its attachments. Look for reversed or twisted segments, implausible bends, lost volume, pinched joints, stretched slivers, detached parts, incorrect rigid attachments, slipping or floating support, body intersections, missed contact and inconsistent motion direction. Check foot/ankle/shin/knee/hip orientation when those structures exist; a mathematically constant bone can still drive a badly folded mesh.
 
-For 2D, inspect changing construction and silhouette, joint direction, volume, perspective, feature placement, identity, line/color consistency, depth order and contact. For 3D, also inspect skin-weight leakage, pole-vector flips, joint axes, bind transforms, interpolation wraps, texture/UV stretching and deformed geometry. The method of diagnosis depends on the subject; characters and anatomical structures are not mandatory.
+For 2D, inspect changing construction and silhouette, joint direction, volume, perspective, feature placement, identity, line/color consistency, depth order and contact. The method of diagnosis depends on the subject; characters and anatomical structures are not mandatory.
 
 Judge performance as well as defects: preparation, force, balance, action spacing, reaction, recovery, gaze, expression, camera readability and temporal continuity. Compare energy, rhythm, variety and emotional or visual purpose with the recorded [brief and performance intent](brief-to-performance.md). Repeated neutral poses, missing responses or weak staging can be wrong even without a technical artifact. Distinguish deliberate stylization, smear drawings, squash/stretch or unsupported motion from unintended faults.
 

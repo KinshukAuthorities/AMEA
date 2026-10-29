@@ -227,7 +227,7 @@ class PackagingTests(unittest.TestCase):
             result = builder.build(root)
             content = Path(result["standalone_instructions"]).read_text(encoding="utf-8")
             self.assertEqual(Path(result['standalone_instructions']).name,'CHATGPT-AMEA.md')
-            for name in ("amea-create", "amea-recreate", "amea-edit", "amea-3d"):
+            for name in ("amea-create", "amea-recreate", "amea-edit"):
                 self.assertIn(f"skills/{name}/SKILL.md", content)
             self.assertNotIn("](../", content)
             with zipfile.ZipFile(result["archive"]) as archive:

@@ -2,7 +2,7 @@
 
 Use [computer-vision review and repair](visual-review-and-repair.md) as the primary animation-quality gate. Inspect actual playback and consecutive rendered frames, correct observed defects in native work, and visually retest the affected sequence. Code measurements support that process; they cannot close a visible issue by themselves.
 
-Apply these checks to the resolved [canonical workflow](workflow-selection.md). Drawing checks apply to drawn work; the additional mesh/rig checks apply only to selected rendered 3D, not to a Blender scene containing Grease Pencil drawings. Do not fabricate a native file or validator pass for an application that was not used.
+Apply these checks to the resolved [canonical workflow](workflow-selection.md). Apply drawing checks to the selected 2D documents. Do not fabricate a native file or validator pass for an application that was not used.
 
 Review the actual artifacts at each requested stage. Automated checks can find corrupt images, missing files, repeated pixel content, timeline gaps, stale records, and absent deliverables. They cannot establish good drawing, appropriate performance, convincing motion, or faithful understanding.
 
@@ -34,13 +34,3 @@ Keep review records bound to current drawings, timing, native files and relevant
 For the Krita-only helper, `structural_passed` means mechanical integrity and `recorded_reviews_current` means current pass records exist. Cross-software acceptance instead uses its own `recorded_acceptance_current` result; Blender transport reports native compilation only. None certifies truthful observations or artistic quality. Do not require an unrelated helper's fields to approve a different application. Reject transformed stills that fail the requested performance through actual visual comparison, even if structural checks pass.
 
 If quality is insufficient, revise the affected drawings and dependencies. If a required capability is missing, deliver a truthful checkpoint with the remaining work identified. Do not label planning, generated stills, source re-encoding, or unreviewed roughs as a completed drawn animation.
-
-## Additional 3D review
-
-Compare real renders against stable references for structure, silhouette, proportions, material behavior, fine features, seams, and required views. Test representative poses and expressions before a long performance bake. Inspect topology, joint pinching, spikes, twisting, rigid attachments, UV projection, and texture behavior through motion.
-
-Watch motion at intended speed, then inspect critical frames and transitions. Check root spacing, support and balance, contact surfaces, reach, path commitment, reactions, recovery, landings, gaze, emotion, camera framing, and screen direction. Verify that unsupported motion changes pose appropriately rather than holding a raised neutral stance. Repetitive poses and uniform timing remain artistic defects even when every frame differs.
-
-Review real surfaces rather than relying only on skeletal measurements. Bone-length constancy cannot rule out mesh folding, intersection, sliding feet, or a visible miss. Effects and blur can conceal problems; inspect clean previews too. A valid dense mesh and a mathematically consistent rig are not production acceptance.
-
-Reopen the selected application's native scene, check packed/linked assets and useful editing structure, and inspect the actual encoded result and audio. Record exact reviewed ranges and limitations. Do not state that a whole film was watched or a mix was heard when only still samples or waveforms were checked.

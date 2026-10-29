@@ -8,7 +8,7 @@ from pathlib import Path
 
 def build(root=None):
     root = Path(root).resolve() if root else Path(__file__).resolve().parents[1]
-    skills = [root / "skills" / name for name in ("amea", "amea-create", "amea-recreate", "amea-edit", "amea-3d")]
+    skills = [root / "skills" / name for name in ("amea", "amea-create", "amea-recreate", "amea-edit")]
     documents = [folder / "SKILL.md" for folder in skills]
     documents += sorted((skills[0] / "references").glob("*.md"))
     sections = ["# AMEA — ChatGPT Animation Production Instructions\n\n"
@@ -25,8 +25,7 @@ def build(root=None):
                 "Read the canonical workflow-selection section first: new unspecified anime requests use authored "
                 "drawn 2D in Blender Grease Pencil. Explicit user choices and existing project medium/software take precedence. "
                 "Construction, changing poses and consecutive native review are the default; generation, tracing, cutout "
-                "and 3D methods are explicit alternatives. Default authored 2D requires no generation service. "
-                "For selected 3D asset generation, prefer TRELLIS.2 when suitable. "
+                "methods are explicit alternatives. Default authored 2D requires no generation service. "
                 "If an explicitly selected generation method's required model or online route is unavailable, "
                 "explain the blocker, ask which available alternative the user wants, and wait before switching "
                 "methods, installing an inference stack or downloading a local model. Reuse an existing choice. "

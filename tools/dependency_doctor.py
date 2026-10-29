@@ -5,7 +5,6 @@ from common import discover
 
 def inspect(profile='drawing',deep=False):
     names=['Pillow']
-    if profile=='trellis':names+=['torch','torchvision','numpy','imageio','opencv-python-headless','tqdm','trimesh','safetensors']
     versions={};missing=[]
     for name in dict.fromkeys(names):
         try:versions[name]=metadata.version(name)
@@ -17,23 +16,14 @@ def inspect(profile='drawing',deep=False):
         'preferences':'Use canonical workflow-selection.md: explicit/inherited choices first; otherwise authored drawn 2D in Blender. Ask only genuinely unresolved choices.',
         'gui_control':'Not tested','image_generation':'Optional for a selected generation task; not needed by default authored 2D and not supplied by pip',
         'speech_generation':'Not configured; not mandatory','artistic_quality':'Not tested','smoke_checks':{}}
-    if profile=='trellis':report['backend_runtime']='Native extensions, source imports and real generation still require testing in the selected TRELLIS.2 environment.'
     if deep:
         if 'Pillow' in versions:
             try:
                 from PIL import Image
                 im=Image.new('RGBA',(2,2),(1,2,3,128));report['smoke_checks']['pillow']=im.getpixel((0,0))==(1,2,3,128)
             except Exception as e:report['smoke_checks']['pillow_error']=str(e)
-        if profile=='trellis' and 'torch' in versions:
-            try:
-                import torch
-                device='cuda' if torch.cuda.is_available() else 'cpu'
-                report['smoke_checks']['tensor']={'device':device,'sum':torch.arange(6,device=device).sum().item(),
-                    'torch':torch.__version__,
-                    'gpu':torch.cuda.get_device_name(0) if device=='cuda' else None}
-            except Exception as e:report['smoke_checks']['tensor_error']=str(e)
     return report
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--profile',choices=['drawing','trellis'],default='drawing');p.add_argument('--deep',action='store_true')
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--profile',choices=['drawing'],default='drawing');p.add_argument('--deep',action='store_true')
     a=p.parse_args();print(json.dumps(inspect(a.profile,a.deep),indent=2))

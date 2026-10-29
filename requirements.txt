@@ -6,31 +6,6 @@ Pillow>=10
 # Python runtime. Reading the skills does not require pip installation.
 # Install only dependencies required by the selected production route.
 
-# OPTIONAL 3D ASSET GENERATION
-# Preferred first candidate: TRELLIS.2 when suitable.
-# Hosted demo: https://huggingface.co/spaces/microsoft/TRELLIS.2
-# Official source/setup: https://github.com/microsoft/TRELLIS.2
-# Project: https://microsoft.github.io/TRELLIS.2/
-# Weights: https://huggingface.co/microsoft/TRELLIS.2-4B
-# Hosted generation needs no local PyTorch or model weights.
-# If the required model is unavailable or hosted access is blocked, explain the
-# blocker, ask the user which alternative route to take, and wait for the answer.
-# Reuse a route the user has already selected; do not select an automatic fallback.
-
-# OPTIONAL LOCAL GENERATION: only after local execution has been selected.
-# Inspect the user's OS, GPU/VRAM, RAM, storage and compatible cached installations.
-# Follow the selected model's current official installer in an isolated environment.
-# The TRELLIS.2 stack can include compatible torch/torchvision/CUDA, numpy,
-# Pillow, imageio, imageio-ffmpeg, tqdm, easydict, opencv-python-headless,
-# ninja, trimesh, transformers, gradio, tensorboard, pandas, lpips,
-# zstandard, kornia, timm and the upstream-pinned utils3d source.
-# Native extensions may include flash-attn or a supported attention alternative,
-# nvdiffrast, nvdiffrec, CuMesh, O-Voxel and FlexGEMM.
-# Use current upstream pins and platform instructions, not a fixed universal stack.
-# PyTorch wheel selection: https://pytorch.org/get-started/locally/
-# Do not install these optional packages merely because they are listed here.
-# Preserve upstream licenses, source/checkpoint identities and modification notices.
-
 # EXTERNAL APPLICATIONS: use the user's chosen software.
 # Blender: https://www.blender.org/download/
 # Krita: https://krita.org/en/download/

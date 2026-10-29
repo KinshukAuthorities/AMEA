@@ -37,7 +37,7 @@ Story/action and camera workers can plan while assets are built, using labeled p
 
 ## Prove the performance before finishing
 
-Use a timed animatic for coverage and pacing, then a moving pencil test or 3D blockout with real changing poses/forms to prove the action. A storyboard or moving still images alone cannot demonstrate articulation, weight or interaction. First test a representative demanding interval; then check rough coverage and transitions across the requested sequence before expensive finishing.
+Use a timed animatic for coverage and pacing, then a moving pencil test with real changing poses/forms to prove the action. A storyboard or moving still images alone cannot demonstrate articulation, weight or interaction. First test a representative demanding interval; then check rough coverage and transitions across the requested sequence before expensive finishing.
 
 Use [computer-vision review](visual-review-and-repair.md) to compare actual motion against the intent and canonical references. Judge whether movement and reactions read, energy and rhythm match the brief, emotional or visual beats are conveyed, camera choices help, and transitions remain coherent. Weak, repetitive, unreadable or contextually inappropriate performance is a revision issue even when files are valid and no numerical defect exists.
 

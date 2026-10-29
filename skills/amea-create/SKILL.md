@@ -1,13 +1,13 @@
 ---
 name: amea-create
-description: Produce original 2D or 3D anime animation from a creative brief and optional references, without requiring source footage, using the user's chosen software.
+description: Produce original 2D anime animation from a creative brief and optional references, without requiring source footage, using the user's chosen software.
 ---
 
 # AMEA Original Animation
 
 Select the method using [canonical workflow selection](../amea/references/workflow-selection.md). A new unspecified anime brief uses authored drawn 2D in Blender Grease Pencil; generation and cutout methods require an explicit selection. Do not restart software selection or choose an alternate backend independently.
 
-For 2D use the [production workflow](../amea/references/production.md) and [drawn anime construction](../amea/references/drawn-anime.md). Use [Blender 2D execution](../amea/references/blender-2d.md) for Blender, or the [Krita guide](../amea/references/krita.md) and [drawing helper format](../amea/references/project-format.md) for selected Krita work. For selected 3D use [AMEA 3D](../amea-3d/SKILL.md). Read [asset generation](../amea/references/asset-generation.md) only for an applicable selected generation method, [review](../amea/references/review.md), and [audio](../amea/references/audio.md) for sound timing. Inherit resolved medium/software/method choices from the shared contract.
+For 2D use the [production workflow](../amea/references/production.md) and [drawn anime construction](../amea/references/drawn-anime.md). Use [Blender 2D execution](../amea/references/blender-2d.md) for Blender, or the [Krita guide](../amea/references/krita.md) and [drawing helper format](../amea/references/project-format.md) for selected Krita work. Read [asset generation](../amea/references/asset-generation.md) only for an applicable selected generation method, [review](../amea/references/review.md), and [audio](../amea/references/audio.md) for sound timing. Inherit resolved medium/software/method choices from the shared contract.
 
 Develop the user's brief into animation. Accept text, sketches, designs, images, audio, or partial work as optional starting material. A source video is not a prerequisite. Retain the user's designs and creative constraints; distinguish supplied facts from newly chosen creative decisions.
 

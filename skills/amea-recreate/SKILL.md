@@ -1,6 +1,6 @@
 ---
 name: amea-recreate
-description: Reconstruct requested visual, motion, timing, text, and audio aspects of supplied animation using editable 2D drawings or 3D scenes and source evidence. Use for faithful recreation rather than new story changes.
+description: Reconstruct requested visual, motion, timing, text, and audio aspects of supplied animation using editable 2D drawings and source evidence. Use for faithful recreation rather than new story changes.
 ---
 
 # AMEA Animation Reconstruction
@@ -9,7 +9,7 @@ Use [canonical workflow selection](../amea/references/workflow-selection.md). Re
 
 For Blender-selected drawn reconstruction use [Blender 2D execution](../amea/references/blender-2d.md) and [drawn anime construction](../amea/references/drawn-anime.md). Preserve the source's observed design, performance and exposure timing rather than treating the helper's geometry as a style template.
 
-Read [source analysis](../amea/references/source-analysis.md) and [review](../amea/references/review.md). For 2D use [production](../amea/references/production.md) and the selected application's execution guide; the [Krita drawing helper format](../amea/references/project-format.md) applies only to Krita. For selected 3D use [AMEA 3D](../amea-3d/SKILL.md). Read [asset generation](../amea/references/asset-generation.md) only for an applicable selected generation method and [audio](../amea/references/audio.md) for sound. Inherit the resolved production contract.
+Read [source analysis](../amea/references/source-analysis.md) and [review](../amea/references/review.md). For 2D use [production](../amea/references/production.md) and the selected application's execution guide; the [Krita drawing helper format](../amea/references/project-format.md) applies only to Krita. Read [asset generation](../amea/references/asset-generation.md) only for an applicable selected generation method and [audio](../amea/references/audio.md) for sound. Inherit the resolved production contract.
 
 Determine what the user wants reproduced: appearance, performed movement, staging, timing, soundtrack, or another specified aspect. For drawn reconstruction, analyze and rebuild the animation with editable drawings. Retaining source frames or re-encoding their video is media reuse; disclose it accurately and do not present it as redrawn animation.
 

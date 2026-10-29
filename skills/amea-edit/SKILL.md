@@ -1,6 +1,6 @@
 ---
 name: amea-edit
-description: Edit existing 2D or 3D anime animation, including changed motion, inserted material, persistent later changes, style, timing, text, framing, effects, and contextual audio while preserving unaffected content.
+description: Edit existing 2D anime animation, including changed motion, inserted material, persistent later changes, style, timing, text, framing, effects, and contextual audio while preserving unaffected content.
 ---
 
 # AMEA Animation Editing
@@ -9,7 +9,7 @@ Use [canonical workflow selection](../amea/references/workflow-selection.md) and
 
 For Blender-selected drawn work use [Blender 2D execution](../amea/references/blender-2d.md); use [drawn anime construction](../amea/references/drawn-anime.md) when the edit changes poses or views. A finishing-only edit preserves the existing performance unless changes are requested.
 
-Read [source analysis](../amea/references/source-analysis.md), [editing and styling](../amea/references/editing-and-styling.md), and [review](../amea/references/review.md). For 2D use [production](../amea/references/production.md) and the selected application's execution guide; the [Krita drawing helper format](../amea/references/project-format.md) applies only to Krita. For 3D use [AMEA 3D](../amea-3d/SKILL.md). Read [asset generation](../amea/references/asset-generation.md) only for an applicable selected generation method and [audio](../amea/references/audio.md) for sound. Inherit the resolved method rather than starting a competing preference flow.
+Read [source analysis](../amea/references/source-analysis.md), [editing and styling](../amea/references/editing-and-styling.md), and [review](../amea/references/review.md). For 2D use [production](../amea/references/production.md) and the selected application's execution guide; the [Krita drawing helper format](../amea/references/project-format.md) applies only to Krita. Read [asset generation](../amea/references/asset-generation.md) only for an applicable selected generation method and [audio](../amea/references/audio.md) for sound. Inherit the resolved method rather than starting a competing preference flow.
 
 Interpret the requested changes in the full context of the existing animation. Infer implementation choices, preservation of unaffected content, continuity, synchronization, and requested output delivery without making the user repeat them. A source video, native drawing or scene, frame sequence, or existing AMEA project can supply the starting point.
 

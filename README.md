@@ -6,6 +6,8 @@
 
 [Quick start](#quick-start) · [Capabilities](#capabilities) · [Workflow](#workflow) · [Requirements](#requirements)
 
+AMEA is **2D-only**. Depth comes from constructed perspective, foreshortening and parallax.
+
 Start with a description, reference images, an existing project, or a video. AMEA supplies the skills and instructions for a ChatGPT session that can control the computer, work with files, and inspect the result.
 
 ## Quick start
@@ -45,7 +47,7 @@ drawings without image or video generation.
 
 AMEA develops the prompt into design references, timed action and camera choices, reviewed key poses, breakdowns and finished native animation. You do not need to prescribe the production steps. The [drawn-anime guide](skills/amea/references/drawn-anime.md) addresses construction, support, occlusion and secondary motion; the [Blender 2D guide](skills/amea/references/blender-2d.md) explains the native workflow and optional bulk contour helper. These remain creative production workflows, not a one-command guarantee of a particular artistic standard.
 
-[Canonical workflow selection](skills/amea/references/workflow-selection.md) is the routing authority. The current drawn workflow is the default across creation, reconstruction and new 2D motion edits. Generated-frame, tracing, cutout and 3D production are explicit alternatives, not automatic fallbacks. The consolidated instructions are generated from these same sources; use files from one current bundle rather than mixing old copied prompts with current skills.
+[Canonical workflow selection](skills/amea/references/workflow-selection.md) is the routing authority. The current drawn workflow is the default across creation, reconstruction and new 2D motion edits. Generated-frame, tracing and cutout production are explicit alternatives, not automatic fallbacks. The consolidated instructions are generated from these same sources; use files from one current bundle rather than mixing old copied prompts with current skills.
 
 ## Capabilities
 
@@ -63,7 +65,7 @@ AMEA provides production guidance and transport tools. Drawing quality and anima
 | [Create](skills/amea-create/SKILL.md) | Develop an original animation from your request and optional references. |
 | [Recreate](skills/amea-recreate/SKILL.md) | Rebuild supplied footage with the appearance, action, and timing you want to preserve. |
 | [Edit](skills/amea-edit/SKILL.md) | Apply requested changes, insert material, or edit timing, style, framing, text, effects, and sound. |
-| [Convert to 2D or 3D](skills/amea/SKILL.md) | Recreate a source video in the requested animation format and apply your specified changes. |
+| [Convert to 2D](skills/amea/SKILL.md) | Recreate supplied footage as editable 2D animation. |
 
 For faithful recreation, it follows the source. For edits, it preserves unaffected content and carries persistent changes into later scenes. Sound is handled according to the request and context. You do not need to restate continuity, synchronization, review, or export.
 
@@ -95,7 +97,6 @@ Independent work can run in parallel when the host supports it. The agent review
 
 [`requirements.txt`](requirements.txt) is the single dependency file. Its installable baseline supports the image helpers; comments identify optional model dependencies and official setup links. The agent installs only what the chosen workflow needs. Editors, model weights, libraries, and user projects are not bundled.
 
-If image-to-3D asset generation is selected, **TRELLIS.2 is a preferred candidate** when suitable. The agent uses supplied images or creates missing references, then tries the [official hosted generator](https://huggingface.co/spaces/microsoft/TRELLIS.2) where available. Native modeling and drawn animation do not require this service.
 
 For an explicitly selected generation method, an unavailable required model or blocked service prompts a choice of alternatives before that method changes. This does not block default authored 2D, which needs no generator account or model download. See [asset generation](skills/amea/references/asset-generation.md) and [setup](skills/amea/references/runtime.md).
 

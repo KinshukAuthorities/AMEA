@@ -1,6 +1,6 @@
 ---
 name: amea
-description: Create, recreate, or edit 2D or 3D anime animation with ChatGPT computer control, computer-vision review, editable production assets, contextual sound and playable delivery. Use for AMEA animation production requests.
+description: Create, recreate, or edit 2D anime animation with ChatGPT computer control, computer-vision review, editable production assets, contextual sound and playable delivery. Use for AMEA animation production requests.
 ---
 
 # AMEA — Anime Engineer Anything
@@ -15,20 +15,23 @@ Read [canonical workflow selection](references/workflow-selection.md) first. It 
 
 Read [first-delivery acceptance](references/first-delivery.md) before production. Preserve the request, track its material requirements through actual evidence, prove the intended route with a representative test appropriate to the requested stage before scaling, and compare the integrated result against the original brief. Final-production requests need a test of the finished method; planning-only or rough-only requests stop at their requested stage. Aim for a satisfactory first delivery through internal iteration; do not make the user discover defects or promise guaranteed satisfaction.
 
+AMEA supports 2D animation only. Depth is authored through perspective, foreshortening, changing views and parallax. Mesh production and rendered-character animation are outside this package.
+
+AMEA supports 2D animation only. Depth uses drawn perspective, foreshortening and parallax.
+
 ## Route by intent
 
 - Original animation: read [amea-create](../amea-create/SKILL.md). References may guide the design without making the task a reconstruction.
 - Faithful reconstruction of supplied animation: read [amea-recreate](../amea-recreate/SKILL.md).
 - Changes to existing animation: read [amea-edit](../amea-edit/SKILL.md).
 - Resolve medium, software and method through [canonical workflow selection](references/workflow-selection.md) and record them. Reuse explicit or inherited choices; otherwise use the documented drawn-2D/Blender default. Read [software selection](references/software-selection.md) for capability checks and genuine unresolved choices.
-- For 3D work also read [3D production](../amea-3d/SKILL.md), using the selected software and editable scene assets. For 2D use the drawing references below, adapting execution to the selected application. Preserve an existing project's medium unless conversion is requested.
 - Combine modes when different shots require different work. Video attachment alone does not determine intent. If an essential input is missing, continue independent planning and ask only for that input.
 
-Read [2D design and assets](references/2d-assets.md), [drawn anime construction](references/drawn-anime.md), [production](references/production.md) and [review](references/review.md) for drawing work. Read [Blender 2D execution](references/blender-2d.md) when Blender is selected, or [Krita execution](references/krita.md) when Krita is selected. Read [asset generation](references/asset-generation.md) when creating references or 3D assets, [source analysis](references/source-analysis.md) for source media, and [audio](references/audio.md) for sound. The [drawing helper format](references/project-format.md) applies only to its supported workflow.
+Read [2D design and assets](references/2d-assets.md), [drawn anime construction](references/drawn-anime.md), [production](references/production.md) and [review](references/review.md) for drawing work. Read [Blender 2D execution](references/blender-2d.md) when Blender is selected, or [Krita execution](references/krita.md) when Krita is selected. Read [asset generation](references/asset-generation.md) when creating optional generated 2D references, [source analysis](references/source-analysis.md) for source media, and [audio](references/audio.md) for sound. The [drawing helper format](references/project-format.md) applies only to its supported workflow.
 
 ## Production defaults
 
-Use the resolved software and method. Blender Grease Pencil is the default 2D implementation; explicit or inherited editor choices remain valid. Read [brief to performance](references/brief-to-performance.md) to carry the user's intended energy, pacing, complexity and emotion into visible action and purposeful camera treatment without requiring repeated prompting. Establish consistent design references, shot layout, action plan, key poses, breakdowns and inbetweens appropriate to the requested motion. Preview rough animation against that intent and correct it before cleanup and finish. Preserve useful native assets and timing. Use the [3D project format](references/3d-format.md) for selected rigged/mesh scene production, and the [Blender 2D contract](references/blender-2d.md) for drawn native transport. Do not fabricate drawing records for rigged animation or rig records for drawn work.
+Use the resolved software and method. Blender Grease Pencil is the default 2D implementation; explicit or inherited editor choices remain valid. Read [brief to performance](references/brief-to-performance.md) to carry the user's intended energy, pacing, complexity and emotion into visible action and purposeful camera treatment without requiring repeated prompting. Establish consistent design references, shot layout, action plan, key poses, breakdowns and inbetweens appropriate to the requested motion. Preview rough animation against that intent and correct it before cleanup and finish. Preserve useful native assets and timing. Use the [Blender 2D contract](references/blender-2d.md) for drawn native transport. Do not fabricate drawing records for rigged animation or rig records for drawn work.
 
 For multistep work read [parallel production workers](references/parallel-production.md) early. Use available permitted workers to overlap asset preparation, story/action/camera planning, setup, sound planning and review where dependencies allow. One coordinator maintains the shared brief, revisions and timeline; give each native file one writer and desktop input one owner. Use actual async jobs/processes when agent workers are unavailable, and report the real execution method. Do not wait for asset generation before starting independent planning.
 
@@ -42,7 +45,6 @@ Read [editing and styling](references/editing-and-styling.md) when changing fram
 
 ## Execute and resume
 
-Only for a selected 3D asset-generation route, prefer TRELLIS.2 as the first candidate and use suitable online generation before local setup unless context favors local/offline work. Follow [asset generation](references/asset-generation.md) for supplied or missing images, official hosted links, GLB export, blocked-service handoff, and hardware-aware alternatives. This does not apply to default authored 2D.
 
 If an explicitly selected generation route requires an unavailable model or blocked online service, explain the blocker and ask which available alternative to use. Wait before changing that requested method or setting up a local model. Reuse a choice already supplied. Do not introduce this generation dependency into the authored 2D route.
 
@@ -64,4 +66,4 @@ For completed animation, deliver the requested playable output, editable native 
 
 Save actual visual and sound review observations. Run the applicable helper or equivalent native/mechanical checks for the selected software and requested stage; do not fabricate Krita records for an unrelated workflow. Use the optional cross-software acceptance record in [first-delivery acceptance](references/first-delivery.md) to catch omitted checks and stale reviews. Passing a helper cannot establish anatomy, expressive motion, correct inbetweens, faithful performance, or professional quality. Do not claim source inspection, drawing, listening, tool execution, or review that did not occur. A missing drawing or audio capability remains a named capability gap; it is not solved by writing a stronger prompt or silently choosing an unrelated backend.
 
-Do not pass a visibly poor model because it has many polygons or weak motion because keyframes exist. Correct demonstrated failures. Image-to-3D generation creates static geometry from references; it does not establish universal text-to-video, professional rigging, facial acting, or speech. Image generation and artistic decisions require actually available tools. If a gap remains, label the actual stage instead of claiming the user's quality standard has been met.
+Do not pass a visibly poor model because it has many polygons or weak motion because keyframes exist. Correct demonstrated failures. Image generation and artistic decisions require actually available tools. If a gap remains, label the actual stage instead of claiming the user's quality standard has been met.
