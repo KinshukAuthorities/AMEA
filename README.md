@@ -40,9 +40,7 @@ Use AMEA: [your request]
 For example:
 
 ```text
-Use AMEA to Create a 12-second 2D anime scene in Blender of a courier landing
-on a rooftop, regaining balance, then looking toward the city. Use changing
-drawn perspectives, expressive whole-body motion and wind in loose clothing.
+Use AMEA to Create a 30 seconds epic stickman fighting with sound effects, intense combat, fast paced movements and aura
 ```
 
 AMEA develops the prompt into design references, timed action and camera choices, reviewed key poses, breakdowns and finished native animation. You do not need to prescribe the production steps. The [drawn-anime guide](skills/amea/references/drawn-anime.md) addresses construction, support, occlusion and secondary motion; the [Blender 2D guide](skills/amea/references/blender-2d.md) explains the native workflow and optional bulk contour helper. These remain creative production workflows, not a one-command guarantee of a particular artistic standard.
