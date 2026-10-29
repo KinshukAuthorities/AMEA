@@ -6,8 +6,9 @@
 
 [Quick start](#quick-start) · [Capabilities](#capabilities) · [Workflow](#workflow) · [Requirements](#requirements)
 
+Previously AI agents, video/image generation tools were unreliable cause it dont keep track of scenes,characters,environment when generating clips, also when need to edit some part of a clip, the video generation regenerates the whole clip entirely loosing previous context.
+AMEA solves it , it provides AI AGENTS guidance, tools and skills which help agent itself create anime in blender, which is easily editable, also AI dosent looses its context the scene progresses in continous flow.
 
-Start with a description, an existing project, or a video. AMEA supplies the skills and instructions for a ChatGPT session that can control the computer, work with files, and inspect the result.
 
 ## Quick start
 
