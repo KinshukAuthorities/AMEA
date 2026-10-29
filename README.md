@@ -10,6 +10,12 @@ Previously AI agents, video/image generation tools were unreliable cause it dont
 AMEA solves it , it provides AI AGENTS guidance, tools and skills which help agent itself create anime in blender, which is easily editable, also AI dosent looses its context the scene progresses in continous flow.
 
 
+## Showcases
+
+### BREAKPOINT — Aura Evolved
+
+https://github.com/user-attachments/assets/d0e38c69-f001-4be6-9d3b-f005d98415f4
+
 ## Quick start
 
 ### 1. Get AMEA
